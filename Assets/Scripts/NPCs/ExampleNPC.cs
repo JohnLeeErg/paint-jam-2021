@@ -39,19 +39,21 @@ public class ExampleNPC : MonoBehaviour
 
         //lastly, we will add an Option with no node attached. This will treat the option as an exit button, leaving the conversation when clicked (note: you can have these "exit buttons" trigger codes as well)
         startNode.AddOption("Leave Conversation");
-
-
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if(collision.transform.tag=="Player" && Input.GetButton("Talk"))
+        if (collision.transform.tag == "Player" && Input.GetButton("Talk"))
         {
             convText.StartConversation(startNode);
             if (wanderingScript)
             {
                 wanderingScript.enabled = false;
             }
+        }
+        else if (collision.transform.tag == "Player")
+        {
+            convText.ShowPrompt();
         }
     }
 
@@ -61,5 +63,6 @@ public class ExampleNPC : MonoBehaviour
         {
             wanderingScript.enabled = true;
         }
+        convText.HidePrompt();
     }
 }

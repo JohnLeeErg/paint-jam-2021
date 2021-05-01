@@ -12,6 +12,8 @@ public class UIController : MonoBehaviour
     [SerializeField] private TMP_Text mainUIText;
     [SerializeField] AudioClip[] buttonSounds;
     [SerializeField] AudioSource audioSource;
+    [SerializeField] private Text promptText;
+
     private TMP_Text[] textFields;
     // Start is called before the first frame update
     void Awake()
@@ -63,6 +65,14 @@ public class UIController : MonoBehaviour
             audioSource.Play();
         }
         convText.ButtonPressed(butNum-1);
+    }
+    public void ShowPrompt()
+    {
+        promptText.enabled = true;
+    }
+    public void HidePrompt()
+    {
+        promptText.enabled = false;
     }
 
 }

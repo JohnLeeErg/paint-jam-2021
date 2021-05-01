@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Conversation : MonoBehaviour
 {
-    [SerializeField] private UIController UIcont;
-    [SerializeField] private Canvas UIcanvas;
+    [SerializeField] private UIController UI_cont;
+    [SerializeField] private Canvas convCanvas;
     private Node[,] nodeMap;
     private Node startNode;
     private Node curNode;
@@ -16,12 +16,21 @@ public class Conversation : MonoBehaviour
     public void StartConversation(Node firstNode)
     {
         loadNode(firstNode);
-        UIcanvas.enabled = true;
+        convCanvas.enabled = true;
     }
 
     void LeaveConversation()
     {
-        UIcanvas.enabled = false;
+        convCanvas.enabled = false;
+    }
+
+    public void ShowPrompt()
+    {
+        UI_cont.ShowPrompt();
+    }
+    public void HidePrompt()
+    {
+        UI_cont.HidePrompt();
     }
 
     void loadNode(Node toLoad)
@@ -33,7 +42,7 @@ public class Conversation : MonoBehaviour
             optsText[x] = curNode.options[x].text;
         }
 
-        UIcont.SetScreen(curNode.text, optsText);
+        UI_cont.SetScreen(curNode.text, optsText);
     }
 
     public void ButtonPressed(int butNum)

@@ -1,29 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 
 public class Conversation : MonoBehaviour
 {
     [SerializeField] private UIController UI_cont;
     [SerializeField] private Canvas convCanvas;
+    public UnityEvent startConv, endConv;
     private Node[,] nodeMap;
     private Node startNode;
     private Node curNode;
     public string playerName = "Oscar";
 
     //SEE EXAMPLE NPC FOR MORE INFORMATION ON CREATING NODES
+    void Awake()
+    {
+        if (startConv == null)
+            startConv = new UnityEvent();
+
+        if (endConv == null)
+            endConv = new UnityEvent();
+    }
+
 
     public void StartConversation(Node firstNode)
     {
         loadNode(firstNode);
         convCanvas.enabled = true;
+        startConv.Invoke();
     }
-
     void LeaveConversation()
     {
         convCanvas.enabled = false;
+        endConv.Invoke();
     }
-
     public void ShowPrompt()
     {
         UI_cont.ShowPrompt();

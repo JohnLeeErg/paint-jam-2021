@@ -21,23 +21,35 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb2d;
 
+    private bool inConv = false;
+    [SerializeField] private Conversation convText;
+
     void Start()
     {
         //grabbing all the components and objects
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        convText = GameObject.FindGameObjectWithTag("GameManager").GetComponent<Conversation>();
+        convText.startConv.AddListener(StartConv);
+        convText.endConv.AddListener(EndConv);
     }
 
     void Update()
     {
-        Controls();
-        Footsteps();
-        AnimBoolSet();
+        if (!inConv)
+        {
+            Controls();
+            Footsteps();
+            AnimBoolSet();
+        }
     }
 
     void FixedUpdate()
     {
-        Movement();
+        if (!inConv)
+        {
+            Movement();
+        }
     }
 
     private void Controls()
@@ -118,6 +130,18 @@ public class PlayerMovement : MonoBehaviour
             leftStep.Stop();
             rightStep.Stop();
         }
+    }
+
+    public void StartConv()
+    {
+        inConv = true;
+        print("start");
+    }
+    public void EndConv()
+    {
+        print("end");
+
+        inConv = false;
     }
 
 }

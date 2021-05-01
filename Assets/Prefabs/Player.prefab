@@ -184,7 +184,7 @@ Transform:
   m_GameObject: {fileID: 4829968042270975025}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children:
   - {fileID: 7114405618765658393}
   - {fileID: 8102912043035152613}
@@ -255,11 +255,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  moveSpeed: 3
+  moveSpeed: 2
   leftStep: {fileID: 4829968042270975035}
   rightStep: {fileID: 4829968042270975034}
   soundSpeed: 0.3
   rotAdjust: 90
+  boatLayers:
+    serializedVersion: 2
+    m_Bits: 8
   convText: {fileID: 0}
 --- !u!50 &4829968042270975038
 Rigidbody2D:
@@ -295,7 +298,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.5}
+  m_Offset: {x: 0, y: 0.14}
   serializedVersion: 2
   m_Radius: 0.2
 --- !u!82 &4829968042270975035

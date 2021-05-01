@@ -190,7 +190,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -453,7 +453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6164513703583647675, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
       propertyPath: m_Name
-      value: Text Adventure
+      value: Text Interface
       objectReference: {fileID: 0}
     - target: {fileID: 6164513703583647675, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
       propertyPath: m_IsActive

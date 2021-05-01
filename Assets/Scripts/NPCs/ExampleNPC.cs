@@ -8,12 +8,17 @@ public class ExampleNPC : MonoBehaviour
     public Node startNode;
     private Conversation convText;
     WalkFromPointToPoint wanderingScript;
+    private bool canConverse = false;
+    private bool inConv = false;
+
     // Start is called before the first frame update
     void Start()
     {
         NodeCreate();
         convText = GameObject.FindGameObjectWithTag("GameManager").GetComponent<Conversation>();
         wanderingScript = GetComponent<WalkFromPointToPoint>();//in case this npc can move, stop it while its talking
+        convText.startConv.AddListener(StartConv);
+        convText.endConv.AddListener(EndConv);
     }
 
     protected virtual void NodeCreate()
@@ -41,9 +46,18 @@ public class ExampleNPC : MonoBehaviour
         startNode.AddOption("Leave Conversation");
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    public void StartConv()
     {
-        if (collision.transform.tag == "Player" && Input.GetButton("Talk"))
+        inConv = true;
+    }
+    public void EndConv()
+    {
+        inConv = false;
+    }
+
+    private void Update()
+    {
+        if (Input.GetButton("Talk") && canConverse && !inConv)
         {
             convText.StartConversation(startNode);
             if (wanderingScript)
@@ -51,9 +65,14 @@ public class ExampleNPC : MonoBehaviour
                 wanderingScript.enabled = false;
             }
         }
-        else if (collision.transform.tag == "Player")
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "Player")
         {
             convText.ShowPrompt();
+            canConverse = true;
         }
     }
 

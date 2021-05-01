@@ -44,7 +44,7 @@ public class BoatController : MonoBehaviour
     {
         if (playerInTrigger)
         {
-            if (Input.GetAxis("Talk") > 0)
+            if (Input.GetButtonDown("Talk"))
             {
 
                 print("now on boat:" + !containsPlayer);

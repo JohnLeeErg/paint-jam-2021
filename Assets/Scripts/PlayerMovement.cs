@@ -59,17 +59,25 @@ public class PlayerMovement : MonoBehaviour
 
         //mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
     }
-
+    Collider2D lastLand;
     private void Movement()
     {
         //move player in the direction of the movement coords
         Vector2 newPosition = rb2d.position + movement * moveSpeed * Time.fixedDeltaTime;
-        if (Physics2D.OverlapPoint(newPosition, boatLayers)) //only move to a position if it would still be overlapping a boat layer collider (aka boat or islands)
+        Collider2D land = Physics2D.OverlapPoint(newPosition, boatLayers);
+        if (land) //only move to a position if it would still be overlapping a boat layer collider (aka boat or islands)
         {
 
             rb2d.MovePosition(newPosition);
         }
+        else if(lastLand)
+        {
+            print("is this hanmpin");
+            newPosition = (rb2d.position + movement * moveSpeed * Time.fixedDeltaTime) + movement* Vector2.Distance( lastLand.ClosestPoint(transform.position),transform.position);
 
+            rb2d.MovePosition(newPosition);
+        }
+        lastLand = land;
         //both the pos of the firepoint and player are made, they are being switched between to debug player rotation bug
         //Vector2 fpPos = new Vector2(firePoint.position.x, firePoint.position.y);
         Vector2 playerPos = new Vector2(transform.position.x, transform.position.y);

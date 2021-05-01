@@ -5,7 +5,8 @@ using UnityEngine;
 public class BoatController : MonoBehaviour
 {
     private Rigidbody2D body;
-    public bool rowing;
+    public bool rowingLeft;
+    public bool rowingRight;
 
     [SerializeField] private float strokeForceMulti = 7000; 
     [SerializeField] private float strokeTorqueMulti = 1000;
@@ -15,9 +16,15 @@ public class BoatController : MonoBehaviour
     [SerializeField] private float maxRotation = .5f;
 
 
-    [SerializeField] private float strokeTimer =0;
-    [SerializeField] private float strokeResetTimer = 0;
-    [SerializeField] private bool strokeReset = false;
+    [SerializeField] private float strokeTimerLeft =0;
+    [SerializeField] private float strokeResetTimerLeft = 0;
+
+
+    [SerializeField] private float strokeTimerRight = 0;
+    [SerializeField] private float strokeResetTimerRight = 0;
+
+    [SerializeField] private bool strokeResetLeft = false;
+    [SerializeField] private bool strokeResetRight = false;
 
     // Start is called before the first frame update
     void Start()
@@ -28,45 +35,115 @@ public class BoatController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (!strokeReset) {
-            if (Input.GetKey("space")&&!rowing) {
-                print("here");
-                rowing = true;
-                strokeTimer = 0;
-            } else if (rowing&& !Input.GetKey("space")) {
-                rowing = false;
-         
-                strokeResetTimer = strokeTimer / strokeResetFraction;
+       RightOar();
+       LeftOar();
+    }
+
+    void RightOar() {
+        if (!strokeResetRight)
+        {
+            if (Input.GetAxis("RowRight") >0 && !rowingRight)
+            {
+                rowingRight = true;
+                strokeTimerRight = 0;
+            }
+            else if (rowingRight && !(Input.GetAxis("RowRight") > 0))
+            {
+                rowingRight = false;
+
+                strokeResetTimerRight = strokeTimerRight / strokeResetFraction;
                 print("off");
             }
         }
-        
+
         //returns oars and stops user from rowing
-      else {
-            strokeResetTimer = strokeResetTimer + Time.fixedDeltaTime;
-            if (strokeResetTimer > strokeSeconds/strokeResetFraction)
+        else
+        {
+            strokeResetTimerRight = strokeResetTimerRight + Time.fixedDeltaTime;
+            transform.GetChild(2).localRotation = rotateOar(-155, -25, strokeResetTimerRight / (strokeSeconds / strokeResetFraction));
+
+            if (strokeResetTimerRight > strokeSeconds / strokeResetFraction)
             {
                 print("resetted");
-                strokeReset = false;
-                strokeTimer = 0;
-            }
-        }
-    
-        if (rowing)
-        {
-            moveBoatLeft();
-            moveBoatRight();
-            print("rowing");
-            strokeTimer += Time.fixedDeltaTime;
-            if (strokeTimer > strokeSeconds) {
-                print("resetted");
-                strokeReset = true;
-                rowing = false;
-                strokeResetTimer = 0;
+                strokeResetRight = false;
+                strokeTimerRight = 0;
             }
         }
 
-        
+        if (rowingRight)
+        {
+            moveBoatRight();
+            print("rowing");
+            strokeTimerRight += Time.fixedDeltaTime;
+
+            transform.GetChild(2).localRotation = rotateOar(-25, -155, strokeTimerRight / strokeSeconds);
+
+            if (strokeTimerRight > strokeSeconds)
+            {
+                print("resetted");
+                strokeResetRight = true;
+                rowingRight = false;
+                strokeResetTimerRight = 0;
+            }
+        }
+    }
+
+    void LeftOar()
+    {
+        if (!strokeResetLeft)
+        {
+            if (Input.GetAxis("RowLeft") > 0 && !rowingLeft)
+            {
+                rowingLeft = true;
+                strokeTimerLeft = 0;
+            }
+            else if (rowingLeft && !(Input.GetAxis("RowLeft") > 0))
+            {
+                rowingLeft = false;
+
+                strokeResetTimerLeft = strokeTimerLeft / strokeResetFraction;
+                print("off");
+            }
+        }
+
+        //returns oars and stops user from rowing
+        else
+        {
+            strokeResetTimerLeft = strokeResetTimerLeft + Time.fixedDeltaTime;
+            transform.GetChild(1).localRotation =  rotateOar(155, 25, strokeResetTimerLeft / (strokeSeconds / strokeResetFraction));
+
+            if (strokeResetTimerLeft > strokeSeconds / strokeResetFraction)
+            {
+                print("resetted");
+                strokeResetLeft = false;
+                strokeTimerLeft = 0;
+            }
+        }
+
+        if (rowingLeft)
+        {
+            moveBoatLeft();
+            print("rowing");
+            strokeTimerLeft += Time.fixedDeltaTime;
+
+
+            transform.GetChild(1).localRotation = rotateOar(25,155, strokeTimerLeft / strokeSeconds);
+
+
+            if (strokeTimerLeft > strokeSeconds)
+            {
+                print("resetted");
+                strokeResetLeft = true;
+                rowingLeft = false;
+                strokeResetTimerLeft = 0;
+            }
+        }
+    }
+
+    Quaternion rotateOar(float zfrom, float zTo, float percent) {
+        Quaternion from = Quaternion.Euler(0, 0, zfrom);
+        Quaternion to = Quaternion.Euler(0, 0, zTo);
+        return Quaternion.Lerp(from, to, percent);
     }
 
     void clampMaxSpeed() {

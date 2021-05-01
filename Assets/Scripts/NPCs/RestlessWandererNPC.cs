@@ -18,9 +18,9 @@ public class RestlessWandererNPC : ExampleNPC
 
         startNode.AddOption("Ask what he has seen in his wanderings", enquireAboutStuff);
 
-        Node askAboutRiddleMaster = new Node("",enquireAboutStuff);
+        Node askAboutRiddleMaster = new Node("The riddle master, ah yes, we often partake in a duel of wits, them and I. And though I can often guess at their preliminary ridules, the final question always eludes me...",enquireAboutStuff);
 
-        Node askAboutSoupVerifyier = new Node("", enquireAboutStuff);
+        Node askAboutSoupVerifyier = new Node("I daren't trust that soup verifier, his shifty eyes, his cold stance. But then,  how will I know true soup from the false?", enquireAboutStuff);
 
         Node askAboutOtherIslands = new Node("Ah, alas, i have heard many fanciful tales, but i have heard not of other lands, for I hath no boat", enquireAboutStuff);
 

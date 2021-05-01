@@ -7,11 +7,13 @@ public class RiseFromSeaWhenNearPlayer : MonoBehaviour
     [SerializeField] Transform player;
     [SerializeField] float riseSpeed,rotateSpeed, risenZ,radius;
     Collider2D colRef;
+    Quaternion startRotation;
     float startZ;
     // Start is called before the first frame update
     void Start()
     {
         startZ = transform.position.z;
+        startRotation = transform.rotation;
         colRef=GetComponent<Collider2D>();
     }
 
@@ -22,6 +24,7 @@ public class RiseFromSeaWhenNearPlayer : MonoBehaviour
         {
             if (transform.position.z != risenZ)
             {
+                transform.rotation = startRotation;
                 transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y, risenZ), riseSpeed * Time.deltaTime);
             }
             else
@@ -43,6 +46,10 @@ public class RiseFromSeaWhenNearPlayer : MonoBehaviour
             {
 
                 transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y, startZ), riseSpeed * Time.deltaTime);
+            }
+            else
+            {
+                transform.rotation = startRotation;
             }
         }
     }

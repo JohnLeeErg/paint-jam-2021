@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Animator anim;
     private Rigidbody2D rb2d;
-
+    [SerializeField] LayerMask boatLayers;
     private bool inConv = false;
     [SerializeField] private Conversation convText;
 
@@ -63,7 +63,12 @@ public class PlayerMovement : MonoBehaviour
     private void Movement()
     {
         //move player in the direction of the movement coords
-        rb2d.MovePosition(rb2d.position + movement * moveSpeed * Time.fixedDeltaTime);
+        Vector2 newPosition = rb2d.position + movement * moveSpeed * Time.fixedDeltaTime;
+        if (Physics2D.OverlapPoint(newPosition, boatLayers)) //only move to a position if it would still be overlapping a boat layer collider (aka boat or islands)
+        {
+
+            rb2d.MovePosition(newPosition);
+        }
 
         //both the pos of the firepoint and player are made, they are being switched between to debug player rotation bug
         //Vector2 fpPos = new Vector2(firePoint.position.x, firePoint.position.y);

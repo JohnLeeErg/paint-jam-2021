@@ -6395,8 +6395,8 @@ GameObject:
   - component: {fileID: 1188314713}
   - component: {fileID: 1188314716}
   - component: {fileID: 1188314715}
-  - component: {fileID: 1188314714}
   - component: {fileID: 1188314717}
+  - component: {fileID: 1188314714}
   m_Layer: 0
   m_Name: riddle master
   m_TagString: Untagged
@@ -6427,7 +6427,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1188314712}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e33b5c2f34243754cbcc9ce3eec5e3c8, type: 3}
+  m_Script: {fileID: 11500000, guid: 994877df6f7a398469abdad372529bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1188314715
@@ -7994,10 +7994,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2431034812714602885, guid: 374cebf65a63a534eacc8facc0ddf5c3, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2431034813728440257, guid: 374cebf65a63a534eacc8facc0ddf5c3, type: 3}
       propertyPath: m_Name
       value: Boat
@@ -8007,24 +8003,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2431034813728440260, guid: 374cebf65a63a534eacc8facc0ddf5c3, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.66179556
-      objectReference: {fileID: 0}
-    - target: {fileID: 2431034813728440260, guid: 374cebf65a63a534eacc8facc0ddf5c3, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.66179556
-      objectReference: {fileID: 0}
-    - target: {fileID: 2431034813728440260, guid: 374cebf65a63a534eacc8facc0ddf5c3, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.66179556
-      objectReference: {fileID: 0}
-    - target: {fileID: 2431034813728440260, guid: 374cebf65a63a534eacc8facc0ddf5c3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.18
+      value: 9.56
       objectReference: {fileID: 0}
     - target: {fileID: 2431034813728440260, guid: 374cebf65a63a534eacc8facc0ddf5c3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.51
+      value: 1.53
       objectReference: {fileID: 0}
     - target: {fileID: 2431034813728440260, guid: 374cebf65a63a534eacc8facc0ddf5c3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8062,18 +8046,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2001401740}
-    - target: {fileID: 2431034813728440261, guid: 374cebf65a63a534eacc8facc0ddf5c3, type: 3}
-      propertyPath: maxSpeed
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2431034813728440261, guid: 374cebf65a63a534eacc8facc0ddf5c3, type: 3}
-      propertyPath: strokeForceMulti
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2431034813728440261, guid: 374cebf65a63a534eacc8facc0ddf5c3, type: 3}
-      propertyPath: strokeTorqueMulti
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 374cebf65a63a534eacc8facc0ddf5c3, type: 3}
 --- !u!1 &1575924076

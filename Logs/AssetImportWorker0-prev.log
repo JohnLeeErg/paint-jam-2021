@@ -1,0 +1,657 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.2f1 (068178b99f32) revision 426360'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19041.928; Version 2004; 64bit' Language: 'en' Physical Memory: 16249 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.2.2f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/unity/Paint Jam 2021/paint-jam-2021
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+50621
+Successfully changed project path to: D:/unity/Paint Jam 2021/paint-jam-2021
+D:/unity/Paint Jam 2021/paint-jam-2021
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 46.73 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.2f1 (068178b99f32)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/unity/Paint Jam 2021/paint-jam-2021/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1060 with Max-Q Design (ID=0x1c20)
+    Vendor:   
+    VRAM:     6052 MB
+    Driver:   27.21.14.5167
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56720
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002932 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 41.11 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.475 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002579 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 44.43 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.199 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.87 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1862 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.8 MB.
+System memory in use after: 89.8 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 2295.
+Total: 2.512900 ms (FindLiveObjects: 0.239100 ms CreateObjectMapping: 0.186900 ms MarkObjects: 1.933500 ms  DeleteObjects: 0.151900 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/NVIDIA/Flex Samples/9. Fluid Renderer/FlexArrayAsset.asset
+  artifactKey: Guid(5b5a642a0633c004aa29ddb8ee8d120e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/9. Fluid Renderer/FlexArrayAsset.asset using Guid(5b5a642a0633c004aa29ddb8ee8d120e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe550367d1e3d51f41667ffa86a4c35c') in 0.052748 seconds
+  Import took 0.075127 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000616 seconds.
+  path: Assets/NVIDIA/Flex Samples/9. Fluid Renderer
+  artifactKey: Guid(54f9d43b90c840944b9a06b88a76ee35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/9. Fluid Renderer using Guid(54f9d43b90c840944b9a06b88a76ee35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35f857edecf9aea24c6ba27b30d694be') in 0.007135 seconds
+  Import took 0.027362 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000339 seconds.
+  path: Assets/NVIDIA/Flex Samples/9. Fluid Renderer/FlexSourceAsset.asset
+  artifactKey: Guid(52b89f0480d9eb94d84d0188bdf2387b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/9. Fluid Renderer/FlexSourceAsset.asset using Guid(52b89f0480d9eb94d84d0188bdf2387b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0996e28989d5a734c299e4e9b5f1d782') in 0.012534 seconds
+  Import took 0.018733 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000317 seconds.
+  path: Assets/NVIDIA
+  artifactKey: Guid(611e1c43d059ac94f8ebdb8618f2229f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA using Guid(611e1c43d059ac94f8ebdb8618f2229f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01cfd84e5fb39012fe73ebcdc3d4c2c4') in 0.009912 seconds
+  Import took 0.017916 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000652 seconds.
+  path: Assets/NVIDIA/Flex Samples
+  artifactKey: Guid(81c62e58d5b19bd4c9161bc9a79775e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples using Guid(81c62e58d5b19bd4c9161bc9a79775e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6578c582313f4538541ca8fd6a834c12') in 0.006454 seconds
+  Import took 0.016628 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000397 seconds.
+  path: Assets/NVIDIA/Flex Samples/9. Fluid Renderer/FlexContainer.asset
+  artifactKey: Guid(5d8ee306acea00a4ab8a11114f3eacce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/9. Fluid Renderer/FlexContainer.asset using Guid(5d8ee306acea00a4ab8a11114f3eacce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85e16e1b69e1c0c5609d7db4a1428dc3') in 0.016720 seconds
+  Import took 0.021202 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.149370 seconds.
+  path: Assets/NVIDIA/Flex Samples/9. Fluid Renderer/Scene.unity
+  artifactKey: Guid(1112609ce9d26474fa79e5771846f2a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/9. Fluid Renderer/Scene.unity using Guid(1112609ce9d26474fa79e5771846f2a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd74ec66e0eb842617c167ed7859bfb71') in 0.013486 seconds
+  Import took 0.031044 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 125.387887 seconds.
+  path: Assets/NVIDIA/Flex/Resources/Materials/DebugParticles.mat
+  artifactKey: Guid(6040b80dca2089c4482bdb21543fba07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex/Resources/Materials/DebugParticles.mat using Guid(6040b80dca2089c4482bdb21543fba07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eed89eb6a960c8a2c222d9d42361d076') in 0.135542 seconds
+  Import took 0.236271 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000313 seconds.
+  path: Assets/NVIDIA/Flex/Resources/Materials/FlexFluidMaterial.mat
+  artifactKey: Guid(fcd3fb6f61f1e164ea4cae0d31d14062) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex/Resources/Materials/FlexFluidMaterial.mat using Guid(fcd3fb6f61f1e164ea4cae0d31d14062) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d68008e40e5ea35f0a41fb2a7aedea2') in 0.024684 seconds
+  Import took 0.029955 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000258 seconds.
+  path: Assets/NVIDIA/Flex/Resources/Materials/SourcePreview.mat
+  artifactKey: Guid(5c4824fbd3d314a4aa4c00d174d4f5fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex/Resources/Materials/SourcePreview.mat using Guid(5c4824fbd3d314a4aa4c00d174d4f5fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '565b9f20b4c21a9056c978f8ef52ec74') in 0.213524 seconds
+  Import took 0.216677 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/NVIDIA/Flex/Resources/Materials/DebugParticles.mat
+  artifactKey: Guid(6040b80dca2089c4482bdb21543fba07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex/Resources/Materials/DebugParticles.mat using Guid(6040b80dca2089c4482bdb21543fba07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eed89eb6a960c8a2c222d9d42361d076') in 0.009446 seconds
+  Import took 0.014051 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000274 seconds.
+  path: Assets/NVIDIA/Flex/Resources/Materials/FlexDrawFluid.mat
+  artifactKey: Guid(e6bb4a2d00eee9b44a69e6352f81d27d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex/Resources/Materials/FlexDrawFluid.mat using Guid(e6bb4a2d00eee9b44a69e6352f81d27d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2548989a3b0434b86d0116fff7669f1') in 0.044921 seconds
+  Import took 0.051320 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/NVIDIA/Flex/Resources/Materials/FluidDepthBlur.mat
+  artifactKey: Guid(6371d4cbdc883d941b179b7da24889f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex/Resources/Materials/FluidDepthBlur.mat using Guid(6371d4cbdc883d941b179b7da24889f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '265f5120cc5aab640098896c55a47943') in 0.016745 seconds
+  Import took 0.020366 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/NVIDIA/Flex/Resources/Materials/FluidThickness.mat
+  artifactKey: Guid(da6d225a7fed32d49aaf88cbb91b2795) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex/Resources/Materials/FluidThickness.mat using Guid(da6d225a7fed32d49aaf88cbb91b2795) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b6e2d4152e413f2dc67e4b4fa25b440') in 0.016070 seconds
+  Import took 0.020015 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/NVIDIA/Flex/Resources/Materials/FluidDepth.mat
+  artifactKey: Guid(118d5a06fd19341499cbd860d0819ef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex/Resources/Materials/FluidDepth.mat using Guid(118d5a06fd19341499cbd860d0819ef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54388c0041d28739da00906dcbc1637c') in 0.016797 seconds
+  Import took 0.020566 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/NVIDIA/Flex/Resources/Materials/SurfaceTest.mat
+  artifactKey: Guid(8242b34df3209fe429cbcf067ecd68f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex/Resources/Materials/SurfaceTest.mat using Guid(8242b34df3209fe429cbcf067ecd68f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee875a3a87150c8436c92b216a627bc5') in 0.246989 seconds
+  Import took 0.251446 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/NVIDIA/Flex/Resources/Materials/FluidComposite.mat
+  artifactKey: Guid(1101abf88ad8c2144a7f547756df0a59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex/Resources/Materials/FluidComposite.mat using Guid(1101abf88ad8c2144a7f547756df0a59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3d462c68e1841dce6e6687bfccb607b') in 0.013264 seconds
+  Import took 0.017268 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003491 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.57 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.126 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.62 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1844 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.8 MB.
+System memory in use after: 92.8 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2339.
+Total: 3.271500 ms (FindLiveObjects: 0.407500 ms CreateObjectMapping: 0.160700 ms MarkObjects: 2.465600 ms  DeleteObjects: 0.235000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004710 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.516 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.10 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1844 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.0 MB.
+System memory in use after: 93.0 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2342.
+Total: 4.065200 ms (FindLiveObjects: 0.380400 ms CreateObjectMapping: 0.166900 ms MarkObjects: 3.342100 ms  DeleteObjects: 0.173900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 245.975431 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '694ca9c96bcf791ec7b87cc957ec53a1') in 0.033965 seconds
+  Import took 0.161776 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.134150 seconds.
+  path: Assets/NVIDIA/Flex Samples/7. Soft Skinning
+  artifactKey: Guid(5967a195e7d078949b9d268fadc38514) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/7. Soft Skinning using Guid(5967a195e7d078949b9d268fadc38514) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68ac8078ecf0c3e39a8aa9741816951d') in 0.012674 seconds
+  Import took 0.018059 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.070672 seconds.
+  path: Assets/NVIDIA/Flex Samples/7. Soft Skinning/FlexContainer.asset
+  artifactKey: Guid(eebbcec62bf899d46b83615f3b105cdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/7. Soft Skinning/FlexContainer.asset using Guid(eebbcec62bf899d46b83615f3b105cdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fb31e1a21fe1b31e461ad583c3a5b38') in 0.016319 seconds
+  Import took 0.223274 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000293 seconds.
+  path: Assets/NVIDIA/Flex Samples/7. Soft Skinning/FlexSoftAsset.asset
+  artifactKey: Guid(5b4585584b04e604d8f5937ba1809400) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/7. Soft Skinning/FlexSoftAsset.asset using Guid(5b4585584b04e604d8f5937ba1809400) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '240ee34b47b9c3c524a450a4cbd305f2') in 0.030892 seconds
+  Import took 0.057980 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000292 seconds.
+  path: Assets/NVIDIA/Flex Samples/7. Soft Skinning/Pink.mat
+  artifactKey: Guid(828cd39deefb6814cb5246534cb67381) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/7. Soft Skinning/Pink.mat using Guid(828cd39deefb6814cb5246534cb67381) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '468e89d57ee8837c0df51034248e11d1') in 0.102808 seconds
+  Import took 0.136615 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000319 seconds.
+  path: Assets/NVIDIA/Flex Samples/7. Soft Skinning/Octopus.FBX
+  artifactKey: Guid(daee0f4c40176e94abdb06dcb71f3804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/7. Soft Skinning/Octopus.FBX using Guid(daee0f4c40176e94abdb06dcb71f3804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa2d10d5eb1788b82b5e7807a5581371') in 0.194991 seconds
+  Import took 0.235568 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.459819 seconds.
+  path: Assets/NVIDIA/Flex Samples/7. Soft Skinning/Scene.unity
+  artifactKey: Guid(86bfa7b1bfad59149b44c150d58f9b6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/7. Soft Skinning/Scene.unity using Guid(86bfa7b1bfad59149b44c150d58f9b6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '952a34061346ab91af46e39128041ab8') in 0.005059 seconds
+  Import took 0.011095 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000992 seconds.
+  path: Assets/NVIDIA/Flex Samples/7. Soft Skinning/Scene.unity
+  artifactKey: Guid(86bfa7b1bfad59149b44c150d58f9b6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/7. Soft Skinning/Scene.unity using Guid(86bfa7b1bfad59149b44c150d58f9b6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '952a34061346ab91af46e39128041ab8') in 0.003522 seconds
+  Import took 0.012292 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 78.507727 seconds.
+  path: Assets/NVIDIA/Flex Samples/6. Particle Controller/FlexArrayAsset.asset
+  artifactKey: Guid(12b48fbca10082c4ca0d60529ce51d81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/6. Particle Controller/FlexArrayAsset.asset using Guid(12b48fbca10082c4ca0d60529ce51d81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00466fdc0e6dfbf1021c73ab2ba05341') in 0.008593 seconds
+  Import took 0.318648 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000364 seconds.
+  path: Assets/NVIDIA/Flex Samples/6. Particle Controller/Red.mat
+  artifactKey: Guid(4bbfe9633fb1d9242a36b28d744b3323) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/6. Particle Controller/Red.mat using Guid(4bbfe9633fb1d9242a36b28d744b3323) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3d88904ca0c543fe10df9a89e628d66') in 0.020636 seconds
+  Import took 0.027206 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000330 seconds.
+  path: Assets/NVIDIA/Flex Samples/6. Particle Controller/FlexContainer.asset
+  artifactKey: Guid(148c855e0fbbf0f4982b17b5e749881f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/6. Particle Controller/FlexContainer.asset using Guid(148c855e0fbbf0f4982b17b5e749881f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8963b340af8ebaed8cd98da2fd4203d') in 0.005293 seconds
+  Import took 0.009178 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.109081 seconds.
+  path: Assets/NVIDIA/Flex Samples/4. Soft Actor/FlexContainer.asset
+  artifactKey: Guid(c5239bac2249c104a87726b2dd34792e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/4. Soft Actor/FlexContainer.asset using Guid(c5239bac2249c104a87726b2dd34792e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca6890c5af5bc899ba5d6e9fbcf02069') in 0.003133 seconds
+  Import took 0.006832 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008038 seconds.
+  path: Assets/NVIDIA/Flex Samples/4. Soft Actor/FlexSoftAsset.asset
+  artifactKey: Guid(81612dc1be6b8684ebceec14630ba359) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/4. Soft Actor/FlexSoftAsset.asset using Guid(81612dc1be6b8684ebceec14630ba359) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcd91a9c21b22537c36d8a93dd55bf55') in 0.031750 seconds
+  Import took 0.036225 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.504129 seconds.
+  path: Assets/NVIDIA/Flex Samples/2. Source Actor/FlexContainer.asset
+  artifactKey: Guid(f6241bc123976ab4d82a2cb42039c032) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/2. Source Actor/FlexContainer.asset using Guid(f6241bc123976ab4d82a2cb42039c032) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee8e5359ab02c97c1655a814d85e1ba5') in 0.007325 seconds
+  Import took 0.010949 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000334 seconds.
+  path: Assets/NVIDIA/Flex Samples/2. Source Actor/FlexSourceAsset.asset
+  artifactKey: Guid(11e39b41d1be98943b1fbb927aea45d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/2. Source Actor/FlexSourceAsset.asset using Guid(11e39b41d1be98943b1fbb927aea45d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c3fa4ffbee5c4dc3e965c48509959ac') in 0.004266 seconds
+  Import took 0.008188 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005368 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.89 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.389 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1844 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.9 MB.
+System memory in use after: 93.9 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2350.
+Total: 2.368800 ms (FindLiveObjects: 0.267500 ms CreateObjectMapping: 0.091000 ms MarkObjects: 1.879600 ms  DeleteObjects: 0.129100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002877 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.557 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.01 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1844 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 94.2 MB.
+System memory in use after: 94.2 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2353.
+Total: 4.759900 ms (FindLiveObjects: 0.582300 ms CreateObjectMapping: 0.153100 ms MarkObjects: 3.812500 ms  DeleteObjects: 0.208800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005827 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.61 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.754 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.59 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1844 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.8 MB.
+System memory in use after: 93.8 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2356.
+Total: 4.856500 ms (FindLiveObjects: 0.845300 ms CreateObjectMapping: 0.518400 ms MarkObjects: 3.363700 ms  DeleteObjects: 0.126200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 239.084320 seconds.
+  path: Assets/NVIDIA/Flex Samples/8. Cloth Deformation/Blue.mat
+  artifactKey: Guid(9ccef7ba8ef2e404fa6dbecdcbff9a5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/8. Cloth Deformation/Blue.mat using Guid(9ccef7ba8ef2e404fa6dbecdcbff9a5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f173f5904d46e70f811d5618460e95c') in 0.085233 seconds
+  Import took 0.404939 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000309 seconds.
+  path: Assets/NVIDIA/Flex Samples/8. Cloth Deformation/Red.mat
+  artifactKey: Guid(46b80b0afcaadaa4bb484ecd51dc8eea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/8. Cloth Deformation/Red.mat using Guid(46b80b0afcaadaa4bb484ecd51dc8eea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7e8b10e7eccf98117eae6085a3f7b2c') in 0.015790 seconds
+  Import took 0.021234 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000361 seconds.
+  path: Assets/NVIDIA/Flex Samples/8. Cloth Deformation/FlexClothAsset.asset
+  artifactKey: Guid(1ebef3adf881d674dba0fb2c44443d3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/8. Cloth Deformation/FlexClothAsset.asset using Guid(1ebef3adf881d674dba0fb2c44443d3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96c03b83a889ce73e9de8d49d4f5adae') in 0.060366 seconds
+  Import took 0.065002 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000675 seconds.
+  path: Assets/NVIDIA/Flex Samples/8. Cloth Deformation/FlexContainer.asset
+  artifactKey: Guid(f5f100a110809ae42809cdbaa404ab26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/8. Cloth Deformation/FlexContainer.asset using Guid(f5f100a110809ae42809cdbaa404ab26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8456fb1b3805abca6708dcd09387a645') in 0.016935 seconds
+  Import took 0.062567 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000618 seconds.
+  path: Assets/NVIDIA/Flex Samples/8. Cloth Deformation/Green.mat
+  artifactKey: Guid(6ae106c43806d6449a45a139da13d976) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/8. Cloth Deformation/Green.mat using Guid(6ae106c43806d6449a45a139da13d976) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63d01c8974f1bc843e8d6d4d8d0c68dd') in 0.024109 seconds
+  Import took 0.031593 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.998100 seconds.
+  path: Assets/NVIDIA/Flex Samples/3. Solid Actor/FlexContainer.asset
+  artifactKey: Guid(eb308cb3d4681f6408e82b098d26719e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/3. Solid Actor/FlexContainer.asset using Guid(eb308cb3d4681f6408e82b098d26719e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f734c36e802dd5d7665685ef99f86f4') in 0.005106 seconds
+  Import took 0.010562 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000345 seconds.
+  path: Assets/NVIDIA/Flex Samples/3. Solid Actor/FlexSolidAsset.asset
+  artifactKey: Guid(c52a57f5e9c3d2141ac798bc88fec648) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/3. Solid Actor/FlexSolidAsset.asset using Guid(c52a57f5e9c3d2141ac798bc88fec648) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8a335aaac2c7558ad87ed7f45cc07c5') in 0.017263 seconds
+  Import took 0.141505 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.880880 seconds.
+  path: Assets/NVIDIA/Flex Samples/1. Array Actor/FlexArrayAsset.asset
+  artifactKey: Guid(ab1509697147a1a4699ab87af8c48144) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/1. Array Actor/FlexArrayAsset.asset using Guid(ab1509697147a1a4699ab87af8c48144) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90b7766751109d550c52722caa95df67') in 0.005816 seconds
+  Import took 0.009672 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000273 seconds.
+  path: Assets/NVIDIA/Flex Samples/1. Array Actor/FlexContainer.asset
+  artifactKey: Guid(470a7573861952145a702fe7107917e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/1. Array Actor/FlexContainer.asset using Guid(470a7573861952145a702fe7107917e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f025de83e0469397afec7bbd5fab3f0') in 0.006322 seconds
+  Import took 0.120222 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.622986 seconds.
+  path: Assets/NVIDIA/Flex Samples/4. Soft Actor/Scene.unity
+  artifactKey: Guid(cecbb5521b6abeb4ca93a5fde1abcda8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/4. Soft Actor/Scene.unity using Guid(cecbb5521b6abeb4ca93a5fde1abcda8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8062fbb9613ce7175c971499a28d4e95') in 0.004240 seconds
+  Import took 0.112972 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.230969 seconds.
+  path: Assets/NVIDIA/Flex Samples/5. Cloth Actor/FlexClothAsset.asset
+  artifactKey: Guid(8d05569dc91ff2e4697be6311eb1b11f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/5. Cloth Actor/FlexClothAsset.asset using Guid(8d05569dc91ff2e4697be6311eb1b11f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7aa95d6929fad62d7e948661a27b32fc') in 0.023825 seconds
+  Import took 0.028235 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000429 seconds.
+  path: Assets/NVIDIA/Flex Samples/5. Cloth Actor/FlexContainer.asset
+  artifactKey: Guid(57b509cd1e61bae4db5be22b011b6006) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/5. Cloth Actor/FlexContainer.asset using Guid(57b509cd1e61bae4db5be22b011b6006) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af1da48e0e0445605575fc4c24d38826') in 0.003299 seconds
+  Import took 0.007141 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.574623 seconds.
+  path: Assets/NVIDIA/Flex Samples/5. Cloth Actor/Scene.unity
+  artifactKey: Guid(29841de7b99bd9f4a9e761a6e2cb6785) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/5. Cloth Actor/Scene.unity using Guid(29841de7b99bd9f4a9e761a6e2cb6785) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca64ef3d2ccf5ed1ee805a629f3dc2fa') in 0.008228 seconds
+  Import took 0.014248 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.594245 seconds.
+  path: Assets/NVIDIA/Flex Samples/6. Particle Controller/Scene.unity
+  artifactKey: Guid(3084caadd21e45e489eabfaf5561738a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/6. Particle Controller/Scene.unity using Guid(3084caadd21e45e489eabfaf5561738a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b9ca2dd7f10545a0b66cbd9facddd77') in 0.005007 seconds
+  Import took 0.009604 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003283 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.168 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.60 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1844 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 94.5 MB.
+System memory in use after: 94.5 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2362.
+Total: 2.880800 ms (FindLiveObjects: 0.462200 ms CreateObjectMapping: 0.164400 ms MarkObjects: 2.131700 ms  DeleteObjects: 0.119400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.280162 seconds.
+  path: Assets/NVIDIA/Flex Samples/8. Cloth Deformation/Scene.unity
+  artifactKey: Guid(07da91d39160fde4fa70c6f28d1dd378) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NVIDIA/Flex Samples/8. Cloth Deformation/Scene.unity using Guid(07da91d39160fde4fa70c6f28d1dd378) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa8d1dbe306043e92ea22f19e78ae5ca') in 0.024698 seconds
+  Import took 0.028577 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003207 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.26 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.410 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.56 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1844 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 94.6 MB.
+System memory in use after: 94.6 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2365.
+Total: 2.627700 ms (FindLiveObjects: 0.243500 ms CreateObjectMapping: 0.120700 ms MarkObjects: 2.134700 ms  DeleteObjects: 0.127000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007450 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.61 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.914 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1844 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 94.4 MB.
+System memory in use after: 94.4 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2368.
+Total: 7.123500 ms (FindLiveObjects: 0.435300 ms CreateObjectMapping: 0.142800 ms MarkObjects: 5.734100 ms  DeleteObjects: 0.803900 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

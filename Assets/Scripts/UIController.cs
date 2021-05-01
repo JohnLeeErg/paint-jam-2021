@@ -8,7 +8,7 @@ using TMPro;
 public class UIController : MonoBehaviour
 {
     [SerializeField] private Button[] buttons;
-    [SerializeField] private AdventureText advText;
+    [SerializeField] private Conversation convText;
     [SerializeField] private TMP_Text mainUIText;
     [SerializeField] AudioClip[] buttonSounds;
     [SerializeField] AudioSource audioSource;
@@ -62,12 +62,7 @@ public class UIController : MonoBehaviour
             audioSource.clip = buttonSounds[butNum - 1];
             audioSource.Play();
         }
-        advText.ButtonPressed(butNum-1);
+        convText.ButtonPressed(butNum-1);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

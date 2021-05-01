@@ -2,34 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AdventureText : MonoBehaviour
+public class Conversation : MonoBehaviour
 {
     [SerializeField] private UIController UIcont;
-    [SerializeField] private Transform player;
+    [SerializeField] private Canvas UIcanvas;
     private Node[,] nodeMap;
     private Node startNode;
     private Node curNode;
-    private string playerName = "Oscar";
-    // Start is called before the first frame update
-    void Start()
+    public string playerName = "Oscar";
+
+    //SEE EXAMPLE NPC FOR MORE INFORMATION ON CREATING NODES
+
+    public void StartConversation(Node firstNode)
     {
-        //loadNode(startNode);
+        loadNode(firstNode);
+        UIcanvas.enabled = true;
     }
 
-    void testNodes()
+    void LeaveConversation()
     {
-        startNode = new Node("This is the first node, this has player coords attached to it.", new Vector2(0, 0));
-        Node option1 = new Node("This is what happens when you select option 1.", startNode);
-        startNode.AddOption("Option 1", option1);
-        Node option2 = new Node("This is what happens when you select option 2.", startNode);
-        startNode.AddOption("Option 2", option2);
-        Node sub1option2 = new Node("This is a sub option of option 2.", startNode);
-        option2.AddOption("Sub Option 2", sub1option2);
-
-        Node nextNode = new Node("This is an example of another major node with coords attached.", new Vector2(1, 1));
-        startNode.AddOption("Head North", nextNode);
-        nextNode.AddOption("Head South", startNode);
-
+        UIcanvas.enabled = false;
     }
 
     void loadNode(Node toLoad)
@@ -41,11 +33,6 @@ public class AdventureText : MonoBehaviour
             optsText[x] = curNode.options[x].text;
         }
 
-        if(curNode.isMain && player != null)
-        {
-            player.position = curNode.playerCoords;
-        }
-
         UIcont.SetScreen(curNode.text, optsText);
     }
 
@@ -53,6 +40,7 @@ public class AdventureText : MonoBehaviour
     {
         if (butNum < curNode.options.Count)
         {
+            //check for a code to execute
             string code = "";
             if (curNode.options[butNum].code == "nothing")
             {
@@ -62,9 +50,17 @@ public class AdventureText : MonoBehaviour
             {
                 code = curNode.options[butNum].code;
             }
-
-            loadNode(curNode.options[butNum].linkNode);
             CodeExecute(code);
+
+            //then check if we are going to another node or quitting
+            if (curNode.options[butNum].isQuit)
+            {
+                LeaveConversation();
+            }
+            else
+            {
+                loadNode(curNode.options[butNum].linkNode);
+            }
         }
         else
         {
@@ -93,8 +89,6 @@ public class Node
     public string text;
     public bool isMain;
     public List<Option> options;
-    public Vector2 playerCoords;
-
 
     public Node(string text, Node parent)
     {
@@ -103,10 +97,9 @@ public class Node
         options.Add(new Option("[Go Back]", parent));
         isMain = false;
     }
-    public Node(string text, Vector2 playerCoords)
+    public Node(string text)
     {
         this.text = text;
-        this.playerCoords = playerCoords;
         options = new List<Option>();
         isMain = true;
     }
@@ -119,6 +112,15 @@ public class Node
     {
         options.Add(new Option(text, child, code));
     }
+    public void AddOption(string text)
+    {
+        options.Add(new Option(text));
+    }
+
+    public void AddOption(string text, string code)
+    {
+        options.Add(new Option(text, code));
+    }
 
     public void RemoveOption(Option toRemove)
     {
@@ -130,12 +132,14 @@ public class Option
 {
     public Node linkNode;
     public string text, code;
+    public bool isQuit;
 
     public Option(string text, Node linkNode)
     {
         this.text = text;
         this.linkNode = linkNode;
         this.code = "nothing";
+        this.isQuit = false;
     }
 
     public Option(string text, Node linkNode, string code)
@@ -143,5 +147,18 @@ public class Option
         this.text = text;
         this.linkNode = linkNode;
         this.code = code;
+        this.isQuit = false;
+    }
+    public Option(string text) //if an option has no attached node, it is assumed that choosing that option will exit the conversation
+    {
+        this.text = text;
+        this.code = "nothing";
+        this.isQuit = true;
+    }
+    public Option(string text, string code) //if an option has no attached node, it is assumed that choosing that option will exit the conversation
+    {
+        this.text = text;
+        this.code = code;
+        this.isQuit = true;
     }
 }

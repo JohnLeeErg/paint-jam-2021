@@ -5,16 +5,18 @@ using UnityEngine;
 //A test NPC
 public class ExampleNPC : MonoBehaviour
 {
-    private Node startNode;
+    public Node startNode;
     private Conversation convText;
+    WalkFromPointToPoint wanderingScript;
     // Start is called before the first frame update
     void Start()
     {
         NodeCreate();
         convText = GameObject.FindGameObjectWithTag("GameManager").GetComponent<Conversation>();
+        wanderingScript = GetComponent<WalkFromPointToPoint>();//in case this npc can move, stop it while its talking
     }
 
-    void NodeCreate()
+    protected virtual void NodeCreate()
     {
         //First you have to make a start node, which all other nodes in the conversation somehow link to
         startNode = new Node("This is the first node.");
@@ -46,6 +48,18 @@ public class ExampleNPC : MonoBehaviour
         if(collision.transform.tag=="Player" && Input.GetButton("Talk"))
         {
             convText.StartConversation(startNode);
+            if (wanderingScript)
+            {
+                wanderingScript.enabled = false;
+            }
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (wanderingScript)
+        {
+            wanderingScript.enabled = true;
         }
     }
 }

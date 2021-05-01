@@ -1524,6 +1524,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e33b5c2f34243754cbcc9ce3eec5e3c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &564285261
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564285259}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.21
+--- !u!114 &564285262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564285259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 523ccb8c7bcc3614e9a655716c2b1a1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 922446437}
+  riseSpeed: 0.1
+  rotateSpeed: 15
+  risenZ: 0
+  radius: 1
 --- !u!1 &566288680
 GameObject:
   m_ObjectHideFlags: 0
@@ -5830,7 +5863,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 218125145057956263, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 424146897686836321, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
       propertyPath: m_Color.a
@@ -6249,7 +6282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ba0ac5ee9de849e40a2b9212e113d788, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.92
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ba0ac5ee9de849e40a2b9212e113d788, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6504,7 +6537,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4829968042270975039, guid: 4ffd456412a3228488e15cc7d3ce46cb, type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4829968042270975039, guid: 4ffd456412a3228488e15cc7d3ce46cb, type: 3}
       propertyPath: m_SortingLayerID

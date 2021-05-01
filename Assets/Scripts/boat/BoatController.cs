@@ -5,15 +5,20 @@ using UnityEngine;
 public class BoatController : MonoBehaviour
 {
     private Rigidbody2D body;
-    public bool rowingLeft;
-    public bool rowingRight;
+    [SerializeField] private bool rowingLeft;
+    [SerializeField] private bool rowingRight;
+
+    public bool containsPlayer = false;
+    private bool playerInTrigger = false;
 
     [SerializeField] private float strokeForceMulti = 7000; 
     [SerializeField] private float strokeTorqueMulti = 1000;
     [SerializeField] private float strokeSeconds = 1;
     [SerializeField] private float strokeResetFraction = 2;
-    [SerializeField] private float maxSpeed = 10000; 
-    [SerializeField] private float maxRotation = .5f;
+    private float strokeResetTime;
+    [SerializeField] private float maxSpeed = 10000;
+    [SerializeField] private float minOarAngle = 25;
+    [SerializeField] private float maxOarAngle = 155;
 
 
     [SerializeField] private float strokeTimerLeft =0;
@@ -26,17 +31,39 @@ public class BoatController : MonoBehaviour
     [SerializeField] private bool strokeResetLeft = false;
     [SerializeField] private bool strokeResetRight = false;
 
+    public GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
         body = gameObject.GetComponent<Rigidbody2D>();
+        strokeResetTime = (strokeSeconds / strokeResetFraction);
     }
 
+    void Update()
+    {
+        if (playerInTrigger)
+        {
+            if (Input.GetAxis("Talk") > 0)
+            {
+
+                print("now on boat:" + !containsPlayer);
+                player.GetComponent<PlayerMovement>().enabled = containsPlayer;
+                containsPlayer = !containsPlayer;
+            }
+        }
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
-       RightOar();
-       LeftOar();
+        if (containsPlayer)
+        {
+            RightOar();
+            LeftOar();
+            player.transform.position = transform.position;
+            
+        }
+
     }
 
     void RightOar() {
@@ -50,9 +77,10 @@ public class BoatController : MonoBehaviour
             else if (rowingRight && !(Input.GetAxis("RowRight") > 0))
             {
                 rowingRight = false;
-
-                strokeResetTimerRight = strokeTimerRight / strokeResetFraction;
-                print("off");
+                strokeResetRight = true;
+                strokeResetTimerRight = (1-(strokeTimerRight / strokeSeconds)) * strokeResetTime;
+                transform.GetChild(2).localRotation = rotateOar(-maxOarAngle, -minOarAngle, strokeResetTimerRight / strokeResetTime);
+                strokeTimerRight = 0;
             }
         }
 
@@ -60,11 +88,10 @@ public class BoatController : MonoBehaviour
         else
         {
             strokeResetTimerRight = strokeResetTimerRight + Time.fixedDeltaTime;
-            transform.GetChild(2).localRotation = rotateOar(-155, -25, strokeResetTimerRight / (strokeSeconds / strokeResetFraction));
+           transform.GetChild(2).localRotation = rotateOar(-maxOarAngle, -minOarAngle, strokeResetTimerRight / strokeResetTime);
 
-            if (strokeResetTimerRight > strokeSeconds / strokeResetFraction)
+            if (strokeResetTimerRight > strokeResetTime)
             {
-                print("resetted");
                 strokeResetRight = false;
                 strokeTimerRight = 0;
             }
@@ -73,14 +100,12 @@ public class BoatController : MonoBehaviour
         if (rowingRight)
         {
             moveBoatRight();
-            print("rowing");
             strokeTimerRight += Time.fixedDeltaTime;
 
-            transform.GetChild(2).localRotation = rotateOar(-25, -155, strokeTimerRight / strokeSeconds);
+            transform.GetChild(2).localRotation = rotateOar(-minOarAngle, -maxOarAngle, strokeTimerRight / strokeSeconds);
 
             if (strokeTimerRight > strokeSeconds)
             {
-                print("resetted");
                 strokeResetRight = true;
                 rowingRight = false;
                 strokeResetTimerRight = 0;
@@ -100,9 +125,11 @@ public class BoatController : MonoBehaviour
             else if (rowingLeft && !(Input.GetAxis("RowLeft") > 0))
             {
                 rowingLeft = false;
-
-                strokeResetTimerLeft = strokeTimerLeft / strokeResetFraction;
-                print("off");
+                strokeResetLeft = true;
+                strokeResetTimerLeft = (1 - (strokeTimerLeft / strokeSeconds)) * strokeResetTime;
+                transform.GetChild(1).localRotation = rotateOar(maxOarAngle, minOarAngle, strokeResetTimerLeft / strokeResetTime);
+                strokeTimerRight = 0;
+                print("off1");
             }
         }
 
@@ -110,9 +137,9 @@ public class BoatController : MonoBehaviour
         else
         {
             strokeResetTimerLeft = strokeResetTimerLeft + Time.fixedDeltaTime;
-            transform.GetChild(1).localRotation =  rotateOar(155, 25, strokeResetTimerLeft / (strokeSeconds / strokeResetFraction));
+            transform.GetChild(1).localRotation =  rotateOar(maxOarAngle, minOarAngle, strokeResetTimerLeft / strokeResetTime);
 
-            if (strokeResetTimerLeft > strokeSeconds / strokeResetFraction)
+            if (strokeResetTimerLeft > strokeResetTime)
             {
                 print("resetted");
                 strokeResetLeft = false;
@@ -127,7 +154,7 @@ public class BoatController : MonoBehaviour
             strokeTimerLeft += Time.fixedDeltaTime;
 
 
-            transform.GetChild(1).localRotation = rotateOar(25,155, strokeTimerLeft / strokeSeconds);
+            transform.GetChild(1).localRotation = rotateOar(minOarAngle, maxOarAngle, strokeTimerLeft / strokeSeconds);
 
 
             if (strokeTimerLeft > strokeSeconds)
@@ -161,6 +188,24 @@ public class BoatController : MonoBehaviour
     void moveBoatRight() {
         body.AddForce(transform.up.normalized * strokeForceMulti, ForceMode2D.Force);
         body.AddTorque(1 * strokeTorqueMulti);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            print("in");
+            playerInTrigger = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            print("out");
+            playerInTrigger = false;
+        }
     }
 }
 

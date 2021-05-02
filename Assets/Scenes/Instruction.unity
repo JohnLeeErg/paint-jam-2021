@@ -609,7 +609,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "    WASD/Arrow Keys: Walk Around\r\n    E/Space: Dock Boat / Talk\r\n   
     D/Right Arrow: Move Right Oar\r\n    A/Left Arrow: Move Left Oar\r\n    Left
-    Click: Select Dialogue Option\r\n    R/0: Restart\r\n    Escape: Exit"
+    Click: Select Dialogue Option\r\n    R/0: Restart\r\n    Escape: Main Menu"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18413b049b83ffc41973061ac9ff27d7, type: 2}
   m_sharedMaterial: {fileID: -8419442912415218467, guid: 18413b049b83ffc41973061ac9ff27d7, type: 2}

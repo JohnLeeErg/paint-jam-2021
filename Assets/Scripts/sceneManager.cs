@@ -5,6 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class sceneManager : MonoBehaviour
 {
+    private void Update()
+    {
+        if (Input.GetButtonUp("Exit"))
+        {
+            print("quitting");
+            Application.Quit();
+        }
+    }
 
     public void startGame() {
         SceneManager.LoadScene("johnleeTestScene", LoadSceneMode.Single);

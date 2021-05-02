@@ -50,7 +50,7 @@ public class BoatController : MonoBehaviour
 
     void Update()
     {
-        if (playerInTrigger)
+        if (playerInTrigger || containsPlayer)
         {
             if (Input.GetButtonDown("Talk"))
             {
@@ -58,7 +58,12 @@ public class BoatController : MonoBehaviour
                 {
                     print("now on boat:" + !containsPlayer);
                     player.GetComponent<PlayerMovement>().enabled = containsPlayer;
+                    
                     containsPlayer = !containsPlayer;
+                    if (containsPlayer)
+                    {
+                        player.GetComponent<Animator>().Play("Down"); //be in normal stand on the boat please
+                    }
                 }
             }
         }

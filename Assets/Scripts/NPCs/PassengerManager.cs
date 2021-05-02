@@ -1,20 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PassengerManager : MonoBehaviour
 {
     [SerializeField] Transform followPoint;
     [SerializeField] BoatController boatRef;
     [SerializeField] Camera cam1, cam2;
+    [SerializeField] Transform victim, victimEndPoint;
+    [SerializeField] TextMeshPro victimName;
+    [SerializeField] Transform player;
+    [SerializeField] float endFallSpeed;
     public Transform currentPassenger;
     ExampleNPC currentPassengerScript;
     Collider2D currentPassengerCol;
     WalkFromPointToPoint currentPassengerWalkin;
+    bool endCutscenePlaying = false;
     // Start is called before the first frame update
     public void Start()
     {
         CameraFade.StartAlphaFade(Color.black, true, 7f);
+        cam1.GetComponent<CameraFollow>().enabled = false;
     }
     public void FastenNPC(Transform newPassenger)
     {
@@ -37,9 +44,14 @@ public class PassengerManager : MonoBehaviour
     }
     private void Update()
     {
-        if (currentPassengerScript)
+        if (currentPassengerScript && !endCutscenePlaying)
         {
             currentPassenger.position = new Vector3(followPoint.position.x, followPoint.position.y, currentPassenger.transform.position.z);
+        }
+
+        if (endCutscenePlaying)
+        {
+            victim.position = Vector3.MoveTowards(victim.position, victimEndPoint.position, endFallSpeed * Time.deltaTime);
         }
     }
     public void ReturnNPC()
@@ -58,14 +70,27 @@ public class PassengerManager : MonoBehaviour
     {
         
         CameraFade.StartAlphaFade(Color.black, false, 7f);
-
+        victimName.text = currentPassengerScript.NPCName;
+        currentPassenger.parent = victim;
+        currentPassenger.localPosition = Vector3.zero;
+        currentPassenger.localEulerAngles = Vector3.zero;
+        endCutscenePlaying = true;
+        followPoint.GetComponent<ParticleSystem>().Play();
         Invoke("ShowMeTheMoney", 3f);
     }
 
     public void EndTheGameWithPlayer()
     {
 
+        boatRef.enabled = false;
         CameraFade.StartAlphaFade(Color.black, false, 7f);
+        victimName.text = "You, The Soup Goblin";
+        player.parent = victim;
+        player.localEulerAngles = Vector3.zero;
+        player.localPosition = Vector3.zero;
+        endCutscenePlaying = true;
+        boatRef.GetComponent<ParticleSystem>().Play();
+        cam1.GetComponent<CameraFollow>().enabled = false;
         Invoke("ShowMeTheMoney", 3f);
     }
     void ShowMeTheMoney()
@@ -91,5 +116,6 @@ public class PassengerManager : MonoBehaviour
     {
         if(boatRef)
             boatRef.enabled = true;
+        cam1.GetComponent<CameraFollow>().enabled = true;
     }
 }

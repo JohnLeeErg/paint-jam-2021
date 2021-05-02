@@ -36,10 +36,16 @@ public class BabyMoustachioNPC : ExampleNPC
         Node tricked = new Node("WHAT?!!!?! HOW COULD YOU??? After all the fair and justified things I did for my can! [they start sobbing uncontrollably]");
         tricked.AddOption("[Leave Conversation]", "trickedBaby");
 
+        // Acceptance
+        Node acceptance = new Node("Sure, let's go greenleather!");
+        acceptance.AddOption("[Take them to the boat]", transform);
+
         // Approval
         Node approval = new Node("That's right! Everybody ought to get their own cans fair and square, just like me! Hey, you're not so bad, greenleather. Y'know, if you wanted me to go on a mysterious boat journey right now, I definitely wouldn't refuse!");
-        approval.AddOption("Ask if they want to go on a boat ride", transform);
+        approval.AddOption("Ask if they want to go on a boat ride", acceptance);
         approval.AddOption("Boat journey? I would never!", dismissal);
+
+        
 
 
 

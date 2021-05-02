@@ -43,7 +43,7 @@ public class AndyNPC : ExampleNPC
 
         money.AddOption("Take Andy out to Sea", transform);
 
-        startNode.AddOption("You should come on my boat, just cause it would be cool, as like an art, like, statement",art);
+        startNode.AddOption("You should come on my boat, just cause it would be cool, as like an art, statement",art);
 
         startNode.AddOption("Leave Andy to his Cans");
 

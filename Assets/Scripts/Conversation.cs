@@ -7,6 +7,7 @@ public class Conversation : MonoBehaviour
 {
     [SerializeField] private UIController UI_cont;
     [SerializeField] private Canvas convCanvas;
+    [SerializeField] PassengerManager passangerManager;
     public UnityEvent startConv, endConv;
     public UnityEvent<Transform> passNPCTransform;
     private Node[,] nodeMap;
@@ -103,9 +104,12 @@ public class Conversation : MonoBehaviour
             //here is where you make mushrooms do stuff
             nodeMap[4, 6].RemoveOption(nodeMap[4, 6].options[3]);
         }
-        else if (code == "stealTomato")
+        else if (code == "end")
         {
-            //
+            passangerManager.EndTheGameWithCurrentPassenger();
+        }else if (code == "self")
+        {
+            passangerManager.EndTheGameWithPlayer();
         }
     }
 

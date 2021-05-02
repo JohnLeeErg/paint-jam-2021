@@ -47,4 +47,14 @@ public class PassengerManager : MonoBehaviour
         }
         currentPassengerScript = null;
     }
+
+    public void EndTheGameWithCurrentPassenger()
+    {
+
+    }
+
+    public void EndTheGameWithPlayer()
+    {
+
+    }
 }

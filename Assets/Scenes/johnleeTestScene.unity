@@ -5382,26 +5382,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 218125145057956263, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 424146897686836321, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
-      propertyPath: m_Color.a
-      value: 0.5058824
-      objectReference: {fileID: 0}
-    - target: {fileID: 1809530888836576639, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
-      propertyPath: m_Color.a
-      value: 0.5058824
-      objectReference: {fileID: 0}
-    - target: {fileID: 2517681446739038583, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
-      propertyPath: m_Color.a
-      value: 0.5058824
-      objectReference: {fileID: 0}
-    - target: {fileID: 3105863052723958603, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
-      propertyPath: m_Color.a
-      value: 0.6313726
-      objectReference: {fileID: 0}
+    - target: {fileID: 1875103207, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
+      propertyPath: followPoint
+      value: 
+      objectReference: {fileID: 1491277737}
     - target: {fileID: 4641216993044646962, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -5446,86 +5430,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4963378136517168313, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
-      propertyPath: m_Color.a
-      value: 0.5058824
-      objectReference: {fileID: 0}
-    - target: {fileID: 5942466715852660698, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 114.9786
-      objectReference: {fileID: 0}
-    - target: {fileID: 5942466715852660698, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -20.226013
-      objectReference: {fileID: 0}
-    - target: {fileID: 5942466715852660698, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -45.889507
-      objectReference: {fileID: 0}
     - target: {fileID: 6164513703583647675, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
       propertyPath: m_Name
       value: Text Interface
       objectReference: {fileID: 0}
-    - target: {fileID: 7440621324101742996, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
-      propertyPath: passNPCTransform.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7440621324101742996, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
-      propertyPath: passNPCTransform.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7440621324101742996, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
-      propertyPath: passNPCTransform.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1875103207}
-    - target: {fileID: 7440621324101742996, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
-      propertyPath: passNPCTransform.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7440621324101742996, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
-      propertyPath: passNPCTransform.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: FastenNPC
-      objectReference: {fileID: 0}
-    - target: {fileID: 7440621324101742996, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
-      propertyPath: passNPCTransform.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PassengerManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7440621324101742996, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
-      propertyPath: passNPCTransform.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Transform, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7665275869442252683, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
-      propertyPath: m_Color.a
-      value: 0.50980395
-      objectReference: {fileID: 0}
-    - target: {fileID: 8237171259267373276, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
-      propertyPath: m_Color.a
-      value: 0.5058824
-      objectReference: {fileID: 0}
-    - target: {fileID: 8412588007236169619, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
-      propertyPath: m_Color.a
-      value: 0.5058824
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
---- !u!1 &1875103206 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7440621324101743002, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
-  m_PrefabInstance: {fileID: 1875103205}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1875103207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1875103206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97f8a48edf2bd8b4d859735f5aa4ce07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  followPoint: {fileID: 1491277737}
 --- !u!1 &1910686414
 GameObject:
   m_ObjectHideFlags: 0

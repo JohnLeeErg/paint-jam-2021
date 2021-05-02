@@ -24,6 +24,10 @@ public class SoupInspectorNPC : ExampleNPC
 
         arentCampbellsCansAllTheSame.AddOption("Ask who he is even verifying these cans for", furtherQuestion);
 
+        Node cmonnnn = new Node("Alright, alright, lets do it! Just a peak, though, and then I have to get back to work.");
 
+        visitIt.AddOption("say 'cmonnnnn doo itttt'", cmonnnn);
+
+        startNode.AddOption("Leave Conversation");
     }
 }

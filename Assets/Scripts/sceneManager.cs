@@ -9,8 +9,17 @@ public class sceneManager : MonoBehaviour
     {
         if (Input.GetButtonUp("Cancel"))
         {
-            print("quitting");
-            Application.Quit();
+            if (SceneManager.GetActiveScene().name == "FrontPage")
+            {
+                print("quitting");
+                Application.Quit();
+
+            }
+            else
+            {
+                SceneManager.LoadScene("FrontPage", LoadSceneMode.Single);
+
+            }
         }
     }
 
@@ -26,7 +35,8 @@ public class sceneManager : MonoBehaviour
         Application.Quit();
     }
 
-    public void TitleScreen() {
+    public void TitleScreen()
+    {
         SceneManager.LoadScene("FrontPage", LoadSceneMode.Single);
     }
 }

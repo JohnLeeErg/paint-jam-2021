@@ -4485,9 +4485,9 @@ GameObject:
   - component: {fileID: 1575924077}
   - component: {fileID: 1575924080}
   - component: {fileID: 1575924079}
-  - component: {fileID: 1575924078}
   - component: {fileID: 1575924081}
   - component: {fileID: 1575924082}
+  - component: {fileID: 1575924078}
   m_Layer: 0
   m_Name: soup verifyer
   m_TagString: Untagged
@@ -4518,7 +4518,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1575924076}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e33b5c2f34243754cbcc9ce3eec5e3c8, type: 3}
+  m_Script: {fileID: 11500000, guid: e3abb31873a4ff84ebac331182be9593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1575924079

@@ -107,6 +107,7 @@ public class Conversation : MonoBehaviour
         }
         else if (code == "end")
         {
+            print("end");
             passangerManager.EndTheGameWithCurrentPassenger();
         }else if (code == "self")
         {
@@ -213,6 +214,7 @@ public class Option
     {
         this.text = text;
         this.code = code;
+        Debug.Log(this.code);
         this.isQuit = true;
     }
     public Option(string text, Transform npcTransform) //if an option has no attached node, it is assumed that choosing that option will exit the conversation

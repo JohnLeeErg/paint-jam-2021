@@ -6,6 +6,7 @@ public class PassengerManager : MonoBehaviour
 {
     [SerializeField] Transform followPoint;
     [SerializeField] BoatController boatRef;
+    [SerializeField] Camera cam1, cam2;
     public Transform currentPassenger;
     ExampleNPC currentPassengerScript;
     Collider2D currentPassengerCol;
@@ -55,14 +56,27 @@ public class PassengerManager : MonoBehaviour
 
     public void EndTheGameWithCurrentPassenger()
     {
-
+        
         CameraFade.StartAlphaFade(Color.black, false, 7f);
+
+        Invoke("ShowMeTheMoney", 3f);
     }
 
     public void EndTheGameWithPlayer()
     {
 
         CameraFade.StartAlphaFade(Color.black, false, 7f);
+        Invoke("ShowMeTheMoney", 3f);
+    }
+    void ShowMeTheMoney()
+    {
+        CameraFade.SetScreenOverlayColor(Color.black);
+        if (cam1 && cam2)
+        {
+            cam1.enabled = false;
+            cam2.enabled = true;
+        }
+        CameraFade.StartAlphaFade(Color.black, true, 4f);
     }
 
     public void DisaleBoatInput()

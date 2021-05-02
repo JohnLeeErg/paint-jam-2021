@@ -29,8 +29,8 @@ public class TheMawNPC : ExampleNPC
 
         EndNode = new Node("Ahh, little goblin, you have returned with an offering. Is this truly who you think is fit for The Maw?");
 
-        EndNode.AddOption("Yes, this is who I choose to send forth to Cambhell");
-        EndNode.AddOption("No, on second thought, I have made an error, forgive me, Goddess","end");
+        EndNode.AddOption("Yes, this is who I choose to send forth to Cambhell", "end");
+        EndNode.AddOption("No, on second thought, I have made an error, forgive me, Goddess");
         EndNode.AddOption("Am I not a worthy Sacrifice? Take Me Instead!!", "self");
     }
     // Update is called once per frame

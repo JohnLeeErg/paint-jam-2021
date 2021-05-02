@@ -13866,6 +13866,7 @@ GameObject:
   m_Component:
   - component: {fileID: 698397218}
   - component: {fileID: 698397219}
+  - component: {fileID: 698397220}
   m_Layer: 0
   m_Name: mama collider
   m_TagString: Untagged
@@ -13914,6 +13915,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.0023400004, y: 0.0059245117}
   m_EdgeRadius: 0
+--- !u!114 &698397220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698397217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d030a725ead6c4e4891b1b009d151545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCName: Mama Moustachio
+  startPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &701279028
 GameObject:
   m_ObjectHideFlags: 0
@@ -24175,6 +24190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1202071478}
   - component: {fileID: 1202071479}
+  - component: {fileID: 1202071480}
   m_Layer: 0
   m_Name: Fathr Collider
   m_TagString: Untagged
@@ -24190,7 +24206,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202071477}
   m_LocalRotation: {x: -0.054879893, y: -0.9224628, z: 0.06959671, w: 0.37577498}
-  m_LocalPosition: {x: -14.051, y: 5.2, z: 8.981}
+  m_LocalPosition: {x: -14.051, y: 5.2, z: 8.62}
   m_LocalScale: {x: 200, y: 200, z: 200.00003}
   m_Children:
   - {fileID: 827928901}
@@ -24223,6 +24239,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.0050842874, y: 0.0024290667}
   m_EdgeRadius: 0
+--- !u!114 &1202071480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202071477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67ba3392cf24a8146923b8f524ed5e2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCName: Father Moustachio
+  startPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1203180278
 GameObject:
   m_ObjectHideFlags: 0
@@ -46971,19 +47001,22 @@ PolygonCollider2D:
       - {x: -1.4671593, y: -2.5104444}
       - {x: -1.4681534, y: -2.370255}
       - {x: -1.066679, y: -2.7683535}
-      - {x: -0.6260354, y: -2.7921004}
-      - {x: -0.34316435, y: -2.543787}
+      - {x: -0.688478, y: -2.7520204}
+      - {x: -0.49571428, y: -2.45881}
       - {x: -0.60195535, y: -2.180215}
       - {x: -0.6187125, y: -2.0096996}
       - {x: 0.4719383, y: -2.0282283}
       - {x: 0.76220304, y: -2.0394988}
       - {x: 1.0612736, y: -2.1552386}
-      - {x: 1.235924, y: -2.2668777}
+      - {x: 1.2817312, y: -2.2808564}
       - {x: 1.0889863, y: -2.4352355}
       - {x: 0.7998807, y: -2.5329685}
-      - {x: 0.32894385, y: -2.6682622}
-      - {x: 0.2935752, y: -2.8427804}
-      - {x: 0.44776016, y: -3.0281734}
+      - {x: 0.5612972, y: -2.670291}
+      - {x: 0.5707786, y: -2.8109264}
+      - {x: 0.62373793, y: -2.844931}
+      - {x: 0.6412665, y: -2.9345527}
+      - {x: 0.703084, y: -2.9850113}
+      - {x: 0.78565747, y: -3.0328038}
       - {x: 1.233728, y: -3.170696}
       - {x: 1.6329671, y: -3.0986342}
       - {x: 2.0178194, y: -3.1165717}

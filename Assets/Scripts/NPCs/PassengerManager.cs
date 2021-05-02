@@ -13,6 +13,7 @@ public class PassengerManager : MonoBehaviour
     [SerializeField] TextMeshPro victimName;
     [SerializeField] Transform player;
     [SerializeField] float endFallSpeed;
+    [SerializeField] NVIDIA.Flex.FlexSourceActor flex;
     public Transform currentPassenger;
     ExampleNPC currentPassengerScript;
     Collider2D currentPassengerCol;
@@ -57,10 +58,13 @@ public class PassengerManager : MonoBehaviour
 
         if (Input.GetButtonUp("Restart"))
         {
+            flex.isActive = false;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         if (Input.GetButtonUp("Cancel"))
         {
+            flex.isActive = false;
+            
             //go back to menu or application.quit
         }
     }
@@ -78,7 +82,7 @@ public class PassengerManager : MonoBehaviour
 
     public void EndTheGameWithCurrentPassenger()
     {
-        
+        flex.isActive = true;
         CameraFade.StartAlphaFade(Color.black, false, 7f);
         victimName.text = currentPassengerScript.NPCName;
         currentPassenger.parent = victim;

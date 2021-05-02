@@ -23,16 +23,22 @@ public class FatherMoustachioNPC : ExampleNPC
         Node standUpFella = new Node("Hey, yknow what? You seem like a real stand-up fella. Why don't we get outta here and get a can or two before the game?");
 
         // Leaving
-        Node leaving = new Node("Sounds great, fella! We can take a boat ride, get a couple canskies for the game! Let's go!");
+        Node leaving = new Node("Sounds great, fella! We can take a boat ride, get a couple canskies for the game!");
         leaving.AddOption("[Take him to the boat]", transform);
 
         // Rejected
         Node rejected = new Node("Ah, ok...");
         rejected.AddOption("[Leave conversation]");
 
+        // Ladler's fan
+        Node ladlersFan = new Node("A Ladler's fan??? Pfft, ok fella. Well, I hope you're ready to get beat at the Big Game tonight!");
+        ladlersFan.AddOption("[Leave conversation]");
+
 
         standUpFella.AddOption("Let's take a boat ride, get a couple canskies for the game!", leaving);
         standUpFella.AddOption("Nah, I'm alright. Maybe another time...", rejected);
+
+
 
         // Weather
         Node weather2 = new Node("BAAAAAHAHAAHA!!!! I wish, friend! It's sure lookin mighty gorgeous today. Say, that weather's changing all the time these days! One day soup's pourin' down, the next day I'm dry as a raisin!", startNode);
@@ -46,13 +52,15 @@ public class FatherMoustachioNPC : ExampleNPC
         weather.AddOption("Ah, soupfall? I was hoping for another beautiful day like this one!", weather2);
 
 
-        
 
+        // Sports
+        Node brothsFan = new Node("Aha, I know a Broths fan when I see one! You've got good taste fella! Are you gonna be watchin' the game tonight?", startNode);
+        brothsFan.AddOption("Yeah, I NEVER miss a game!", standUpFella);
+        brothsFan.AddOption("Nah, I'm a fan but I probably won't be watching tonight...", rejected);
 
-
-        Node sports = new Node("sports", startNode);
-        Node currentEvents = new Node("Current events", startNode);
-
+        Node sports = new Node("Haha! I knew you were a sporty kinda fella! Gettin' ready for the Big Game tonight! So, are you a Ladlers fan? Or are you rootin' for those Soupland Broths?", startNode);
+        sports.AddOption("Saltfield Ladlers", ladlersFan);
+        sports.AddOption("Soupland Broths", brothsFan);
 
         /* Start Node options
          * 
@@ -62,7 +70,7 @@ public class FatherMoustachioNPC : ExampleNPC
         startNode.AddOption("How about that weather?", weather);
         startNode.AddOption("How about those sports?", sports);
         startNode.AddOption("How about that family?", dontLike);
-        startNode.AddOption("How about those current events?", currentEvents);
+        startNode.AddOption("How about those current events?", dontLike);
         startNode.AddOption("[Leave Conversation]");
     }
 }

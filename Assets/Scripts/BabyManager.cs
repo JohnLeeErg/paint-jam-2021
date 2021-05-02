@@ -7,6 +7,8 @@ public class BabyManager : MonoBehaviour
     [SerializeField] BabyMoustachioNPC friendlyBabyConvo;
     [SerializeField] BabyMoustachioLockedOut lockedOutBabyConvo;
     [SerializeField] BabyMoustachioTrickedOut trickedOutBabyConvo;
+    [SerializeField] MoustacheKidNPC sadKidConvo;
+    [SerializeField] MoustacheKidHappy happyKidConvo;
     MeshRenderer babyCanRenderer;
     MeshRenderer kidCanRenderer;
 
@@ -14,10 +16,15 @@ public class BabyManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Set starter convos
         friendlyBabyConvo.enabled = true;
         lockedOutBabyConvo.enabled = false;
         trickedOutBabyConvo.enabled = false;
 
+        sadKidConvo.enabled = true;
+        happyKidConvo.enabled = false;
+
+        // Show baby can, hide kid can
         babyCanRenderer = GameObject.FindGameObjectWithTag("BabyCan").GetComponentInChildren<MeshRenderer>();
         babyCanRenderer.enabled = true;
 
@@ -39,14 +46,19 @@ public class BabyManager : MonoBehaviour
 
     public void GotTrickedOut()
     {
+        // Switch convos up
         friendlyBabyConvo.enabled = false;
         trickedOutBabyConvo.enabled = true;
+
+        sadKidConvo.enabled = false;
+        happyKidConvo.enabled = true;
+
         
-        // Disabled baby can
+        // Hide baby can
         
         babyCanRenderer.enabled = false;
 
-        // Enable kid can
+        // Show kid can
         
         kidCanRenderer.enabled = true;
     }

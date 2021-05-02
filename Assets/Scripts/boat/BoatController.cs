@@ -30,13 +30,14 @@ public class BoatController : MonoBehaviour
 
     [SerializeField] private bool strokeResetLeft = false;
     [SerializeField] private bool strokeResetRight = false;
-
+    AudioSource boatBump;
     public GameObject player;
     [SerializeField] bool startOnBoat;
     bool touchingLand;
     // Start is called before the first frame update
     void Start()
     {
+        boatBump = GetComponent<AudioSource>();
         body = gameObject.GetComponent<Rigidbody2D>();
         strokeResetTime = (strokeSeconds / strokeResetFraction);
 
@@ -165,7 +166,6 @@ public class BoatController : MonoBehaviour
         if (rowingLeft)
         {
             moveBoatLeft();
-            print("rowing");
             strokeTimerLeft += Time.fixedDeltaTime;
 
 
@@ -209,7 +209,6 @@ public class BoatController : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            print("in");
             playerInTrigger = true;
         }
         if (collision.gameObject.layer == LayerMask.NameToLayer("Boat"))
@@ -218,11 +217,25 @@ public class BoatController : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Boat"))
+        {
+
+            if (boatBump && !boatBump.isPlaying)
+            {
+                boatBump.volume = Random.Range(.4f, .5f);
+                boatBump.pitch = Random.Range(.3f, .6f);
+                boatBump.Play();
+            }
+        
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            print("out");
             playerInTrigger = false;
         }
         if (collision.gameObject.layer == LayerMask.NameToLayer("Boat"))

@@ -49,7 +49,7 @@ public class TheMawNPC : ExampleNPC
         {
             if (passengerManager.currentPassenger == null)
             {
-                print("mid Message?");
+
                 ConvoUpdate(MidNode);
             }
             else

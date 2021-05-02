@@ -61,11 +61,10 @@ public class PassengerManager : MonoBehaviour
             flex.isActive = false;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-        if (Input.GetButtonUp("Cancel"))
-        {
+        if (Input.GetButtonUp("Cancel")) {
+            print("quitting");
             flex.isActive = false;
-            
-            //go back to menu or application.quit
+            SceneManager.LoadScene("FrontPage", LoadSceneMode.Single);
         }
     }
     public void ReturnNPC()

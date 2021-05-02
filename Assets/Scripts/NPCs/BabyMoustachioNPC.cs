@@ -9,6 +9,10 @@ public class BabyMoustachioNPC : ExampleNPC
     {
         startNode = new Node("Hey, greenleather! Whatcha lookin at?");
 
+        /* End nodes
+         * 
+         * 
+         */
         // Abject failure
         Node failAttempt = new Node("Pfft, no thanks. Why don't you go ask blockhead over there?", startNode);
 
@@ -29,15 +33,16 @@ public class BabyMoustachioNPC : ExampleNPC
         broken.AddOption("[Leave Conversation]", "bulliedBaby");
 
 
-        // Aggressive path
+
+
+        /* Aggressive path
+         * 
+         * 
+         */
         Node aggressive = new Node("Yeah, greenleather! Cause you're green and ya stink like tannin' leather!", startNode);
 
         // Aggressive success
-        Node aggressiveSuccess = new Node("What did you just say??!!?! [They start visibly tearing up]");
-
-        startNode.AddOption("Ask if they want to go on a boat ride", failAttempt);
-        startNode.AddOption("Greenleather? Why you little...", aggressive);
-        startNode.AddOption("[Leave Conversation]");
+        Node aggressiveSuccess = new Node("What??!!?! [They start visibly tearing up]");
 
         // Roasts
         aggressive.AddOption("Well at least I'm not a silly poo poo diaperhead!", dismissal);
@@ -50,6 +55,30 @@ public class BabyMoustachioNPC : ExampleNPC
         aggressiveSuccess.AddOption("I SAID: AT LEAST I'M NOT A STINKY DUMB DUMB LITTLE BABY PANTS!!!!!!", broken);
         aggressiveSuccess.AddOption("Nothing... Sorry, I don't know what came over me.", dismissal);
 
+
+
+        /* Kind Path
+         * 
+         * 
+         */
+
+
+
+
+        /* Start Node options
+         * 
+         * 
+         */
+        startNode.AddOption("Ask if they want to go on a boat ride", failAttempt);
+        startNode.AddOption("Greenleather? Why you little...", aggressive);
+        startNode.AddOption("Whatcha doin' there kiddo?");
+        startNode.AddOption("[Leave Conversation]");
+
+
+
+
+
+        
         
         
 

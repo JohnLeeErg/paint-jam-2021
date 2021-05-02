@@ -8,6 +8,7 @@ public class Conversation : MonoBehaviour
     [SerializeField] private UIController UI_cont;
     [SerializeField] private Canvas convCanvas;
     [SerializeField] PassengerManager passangerManager;
+    [SerializeField] BabyManager babyManager;
     public UnityEvent startConv, endConv;
     public UnityEvent<Transform> passNPCTransform;
     private Node[,] nodeMap;
@@ -118,6 +119,10 @@ public class Conversation : MonoBehaviour
         else if(code == "disableBoat")
         {
             passangerManager.DisaleBoatInput();
+        }
+        else if(code == "bulliedBaby")
+        {
+            babyManager.GotLockedOut();
         }
     }
 

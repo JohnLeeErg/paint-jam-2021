@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PassengerManager : MonoBehaviour
 {
@@ -52,6 +53,15 @@ public class PassengerManager : MonoBehaviour
         if (endCutscenePlaying)
         {
             victim.position = Vector3.MoveTowards(victim.position, victimEndPoint.position, endFallSpeed * Time.deltaTime);
+        }
+
+        if (Input.GetButtonUp("Restart"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        if (Input.GetButtonUp("Cancel"))
+        {
+            //go back to menu or application.quit
         }
     }
     public void ReturnNPC()

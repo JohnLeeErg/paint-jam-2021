@@ -11,6 +11,10 @@ public class PassengerManager : MonoBehaviour
     Collider2D currentPassengerCol;
     WalkFromPointToPoint currentPassengerWalkin;
     // Start is called before the first frame update
+    public void Start()
+    {
+        CameraFade.StartAlphaFade(Color.black, true, 7f);
+    }
     public void FastenNPC(Transform newPassenger)
     {
         if (currentPassenger!= null)
@@ -52,20 +56,26 @@ public class PassengerManager : MonoBehaviour
     public void EndTheGameWithCurrentPassenger()
     {
 
+        CameraFade.StartAlphaFade(Color.black, false, 7f);
     }
 
     public void EndTheGameWithPlayer()
     {
 
+        CameraFade.StartAlphaFade(Color.black, false, 7f);
     }
 
     public void DisaleBoatInput()
     {
-
+        if (boatRef)
+        {
+            boatRef.enabled = false;
+        }
     }
 
     public void EnableBoatInput()
     {
-
+        if(boatRef)
+            boatRef.enabled = true;
     }
 }

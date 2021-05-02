@@ -12,7 +12,7 @@ public class UIController : MonoBehaviour
     [SerializeField] private TMP_Text mainUIText;
     [SerializeField] AudioClip[] buttonSounds;
     [SerializeField] AudioSource audioSource;
-    [SerializeField] private Text promptText;
+    [SerializeField] private Text promptText, promptText2;
 
     private TMP_Text[] textFields;
     // Start is called before the first frame update
@@ -69,10 +69,12 @@ public class UIController : MonoBehaviour
     public void ShowPrompt()
     {
         promptText.enabled = true;
+        promptText2.enabled = true;
     }
     public void HidePrompt()
     {
         promptText.enabled = false;
+        promptText2.enabled = false;
     }
 
 }

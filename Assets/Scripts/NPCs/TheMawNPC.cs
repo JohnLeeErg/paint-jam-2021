@@ -9,7 +9,6 @@ public class TheMawNPC : ExampleNPC
     Node MidNode;
     RiseFromSeaWhenNearPlayer riseRef;
     [SerializeField] PassengerManager passengerManager;
-
     private void Awake()
     {
         riseRef = GetComponent<RiseFromSeaWhenNearPlayer>();
@@ -18,10 +17,10 @@ public class TheMawNPC : ExampleNPC
     protected override void NodeCreate()
     {
         startNode = new Node("Hello Little Soup Goblin, I have summoned you here for a very important task. You must bring to the Maw a sacrifice, from one of the nearby islands. The Campbell Tomato Soup Must Be Sated");
-        startNode.AddOption("Yes Master...");
-        startNode.AddOption("As you wish, wise and powerful Campbell Babe...");
-        startNode.AddOption("I will Obey");
-        startNode.AddOption("ahh, if it must be so...");
+        startNode.AddOption("Yes Master...", "enableBoat");
+        startNode.AddOption("As you wish, wise and powerful Campbell Babe...", "enableBoat");
+        startNode.AddOption("I will Obey", "enableBoat");
+        startNode.AddOption("ahh, if it must be so...","enableBoat");
 
         MidNode = new Node("Where is the sacrifice, Goblin? You don't wish to incur Campbell's Wrath do you? Then go forth, and find a worthy offering.");
         MidNode.AddOption("bow and scurry off");
@@ -39,6 +38,7 @@ public class TheMawNPC : ExampleNPC
     {
         if (!deliveredFirstDialogue)
         {
+            passengerManager.DisaleBoatInput();
             if (riseRef.risen)
             {
                 convText.StartConversation(startNode);

@@ -2106,10 +2106,10 @@ MonoBehaviour:
   waitInterval: 0
   jiggleSpeed: 1
   startX: -0.74
-  startY: -165.873
+  startY: -140
   startZ: -0.186
   endX: -0.74
-  endY: -165.873
+  endY: -180
   endZ: -0.186
 --- !u!4 &775862718 stripped
 Transform:

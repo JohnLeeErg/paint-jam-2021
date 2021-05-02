@@ -6,6 +6,8 @@ TagManager:
   tags:
   - GameManager
   - Boat
+  - BabyCan
+  - KidCan
   layers:
   - Default
   - TransparentFX

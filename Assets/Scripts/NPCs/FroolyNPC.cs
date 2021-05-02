@@ -28,6 +28,9 @@ public class FroolyNPC : ExampleNPC
         money.AddOption("\"Great, just wait over on my boat then,\"", transform);
         money.AddOption("\"I'll have to think about it some more, see you later.");
 
+        free.AddOption("Good idea, thanks for the tip...");
+
+
     }
 
 }

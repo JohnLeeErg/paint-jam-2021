@@ -110,6 +110,13 @@ public class Conversation : MonoBehaviour
         }else if (code == "self")
         {
             passangerManager.EndTheGameWithPlayer();
+        }else if (code =="enableBoat")
+        {
+            passangerManager.EnableBoatInput();
+        }
+        else if(code == "disableBoat")
+        {
+            passangerManager.DisaleBoatInput();
         }
     }
 

@@ -5,7 +5,8 @@ using UnityEngine;
 public class PassengerManager : MonoBehaviour
 {
     [SerializeField] Transform followPoint;
-    Transform currentPassenger;
+    [SerializeField] BoatController boatRef;
+    public Transform currentPassenger;
     ExampleNPC currentPassengerScript;
     Collider2D currentPassengerCol;
     WalkFromPointToPoint currentPassengerWalkin;
@@ -54,6 +55,16 @@ public class PassengerManager : MonoBehaviour
     }
 
     public void EndTheGameWithPlayer()
+    {
+
+    }
+
+    public void DisaleBoatInput()
+    {
+
+    }
+
+    public void EnableBoatInput()
     {
 
     }

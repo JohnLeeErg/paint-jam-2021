@@ -7,7 +7,7 @@ public class ExampleNPC : MonoBehaviour
 {
     public Node startNode;
     public string NPCName;
-    private Conversation convText;
+    protected Conversation convText;
     WalkFromPointToPoint wanderingScript;
     private bool canConverse = false;
     private bool inConv = false;
@@ -60,6 +60,10 @@ public class ExampleNPC : MonoBehaviour
     }
 
     private void Update()
+    {
+        ConvoUpdate(startNode);
+    }
+    protected virtual void ConvoUpdate(Node startNode)
     {
         if (Input.GetButton("Talk") && canConverse && !inConv)
         {

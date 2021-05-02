@@ -32,12 +32,20 @@ public class BoatController : MonoBehaviour
     [SerializeField] private bool strokeResetRight = false;
 
     public GameObject player;
-
+    [SerializeField] bool startOnBoat;
+    bool touchingLand;
     // Start is called before the first frame update
     void Start()
     {
         body = gameObject.GetComponent<Rigidbody2D>();
         strokeResetTime = (strokeSeconds / strokeResetFraction);
+
+        if (startOnBoat)
+        {
+            print("now on boat:" + !containsPlayer);
+            player.GetComponent<PlayerMovement>().enabled = containsPlayer;
+            containsPlayer = !containsPlayer;
+        }
     }
 
     void Update()
@@ -46,10 +54,12 @@ public class BoatController : MonoBehaviour
         {
             if (Input.GetButtonDown("Talk"))
             {
-
-                print("now on boat:" + !containsPlayer);
-                player.GetComponent<PlayerMovement>().enabled = containsPlayer;
-                containsPlayer = !containsPlayer;
+                if (touchingLand)
+                {
+                    print("now on boat:" + !containsPlayer);
+                    player.GetComponent<PlayerMovement>().enabled = containsPlayer;
+                    containsPlayer = !containsPlayer;
+                }
             }
         }
     }
@@ -197,6 +207,10 @@ public class BoatController : MonoBehaviour
             print("in");
             playerInTrigger = true;
         }
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Boat"))
+        {
+            touchingLand = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -205,6 +219,10 @@ public class BoatController : MonoBehaviour
         {
             print("out");
             playerInTrigger = false;
+        }
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Boat"))
+        {
+            touchingLand = false;
         }
     }
 }

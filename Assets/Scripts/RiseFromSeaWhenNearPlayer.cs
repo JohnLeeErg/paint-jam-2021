@@ -9,6 +9,7 @@ public class RiseFromSeaWhenNearPlayer : MonoBehaviour
     Collider2D colRef;
     Quaternion startRotation;
     float startZ;
+    public bool risen;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,10 +35,12 @@ public class RiseFromSeaWhenNearPlayer : MonoBehaviour
                     colRef.enabled = true;
                 }
                 transform.Rotate(transform.up, rotateSpeed * Time.deltaTime);
+                risen = true;
             }
         }
         else
         {
+            risen = false;
             if (colRef.enabled)
             {
                 colRef.enabled = false;
@@ -50,6 +53,7 @@ public class RiseFromSeaWhenNearPlayer : MonoBehaviour
             else
             {
                 transform.rotation = startRotation;
+                
             }
         }
     }

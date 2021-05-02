@@ -34,5 +34,6 @@ public class FrogKingNPC : ExampleNPC
         valery.AddOption("Lets go then!", yesIllDoIt);
         startNode.AddOption("Leave Conversation");
         yesIllDoIt.AddOption("Take the frog to the boat",transform);
+        yesIllDoIt.AddOption("Leave the frog to his people");
     }
 }

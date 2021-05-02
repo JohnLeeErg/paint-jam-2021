@@ -997,7 +997,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 400064416}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
@@ -1590,7 +1590,7 @@ MonoBehaviour:
   player: {fileID: 922446437}
   riseSpeed: 0.1
   rotateSpeed: 15
-  risenZ: 0
+  risenZ: 0.389
   radius: 1
   risen: 0
 --- !u!1 &566288680
@@ -6181,6 +6181,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1875103207, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
+      propertyPath: cam1
+      value: 
+      objectReference: {fileID: 566288682}
+    - target: {fileID: 1875103207, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
+      propertyPath: cam2
+      value: 
+      objectReference: {fileID: 400064419}
     - target: {fileID: 1875103207, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
       propertyPath: boatRef
       value: 

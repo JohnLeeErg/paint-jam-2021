@@ -7,6 +7,9 @@ public class BabyManager : MonoBehaviour
     [SerializeField] BabyMoustachioNPC friendlyBabyConvo;
     [SerializeField] BabyMoustachioLockedOut lockedOutBabyConvo;
     [SerializeField] BabyMoustachioTrickedOut trickedOutBabyConvo;
+    MeshRenderer babyCanRenderer;
+    MeshRenderer kidCanRenderer;
+
 
     // Start is called before the first frame update
     void Start()
@@ -14,6 +17,12 @@ public class BabyManager : MonoBehaviour
         friendlyBabyConvo.enabled = true;
         lockedOutBabyConvo.enabled = false;
         trickedOutBabyConvo.enabled = false;
+
+        babyCanRenderer = GameObject.FindGameObjectWithTag("BabyCan").GetComponentInChildren<MeshRenderer>();
+        babyCanRenderer.enabled = true;
+
+        kidCanRenderer = GameObject.FindGameObjectWithTag("KidCan").GetComponentInChildren<MeshRenderer>();
+        kidCanRenderer.enabled = false;
     }
 
     // Update is called once per frame
@@ -32,6 +41,13 @@ public class BabyManager : MonoBehaviour
     {
         friendlyBabyConvo.enabled = false;
         trickedOutBabyConvo.enabled = true;
-        // TODO: Add can move here
+        
+        // Disabled baby can
+        
+        babyCanRenderer.enabled = false;
+
+        // Enable kid can
+        
+        kidCanRenderer.enabled = true;
     }
 }

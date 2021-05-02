@@ -7,6 +7,7 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] Transform thingToFollow;
     [SerializeField] float hBuffer, vBuffer, followSpeed, tileSize;
     [SerializeField] Transform topLeft, BottomRight;
+    bool haveEasing=true;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,9 +15,16 @@ public class CameraFollow : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        OldWay();
+        if (haveEasing)
+        {
+            OldWay();
+        }
+        else
+        {
+            NewWay();
+        }
     }
 
     void NewWay()
@@ -31,6 +39,10 @@ public class CameraFollow : MonoBehaviour
 
             Vector3 newPos = Vector3.MoveTowards(transform.position, thingToFollow.position, followSpeed * tileSize * Time.deltaTime);
             transform.position = new Vector3(Mathf.Clamp(newPos.x, topLeft.position.x + Camera.main.orthographicSize * Camera.main.aspect, BottomRight.position.x - Camera.main.orthographicSize * Camera.main.aspect), Mathf.Clamp(newPos.y, BottomRight.position.y + Camera.main.orthographicSize, topLeft.position.y - Camera.main.orthographicSize), -10);
+        }
+        else
+        {
+
         }
     }
 }

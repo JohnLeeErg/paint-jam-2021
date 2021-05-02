@@ -66,7 +66,7 @@ public class FriendlyJiggle : MonoBehaviour
 
 
             // Increment jiggle timer
-            jiggleTimer += 0.001f * jiggleSpeed;
+            jiggleTimer += Time.deltaTime * jiggleSpeed ;
 
             // If done the jiggle, start wait timer again
             if (jiggleTimer >= 1)

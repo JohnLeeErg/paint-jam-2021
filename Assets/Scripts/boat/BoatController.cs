@@ -75,7 +75,7 @@ public class BoatController : MonoBehaviour
         {
             RightOar();
             LeftOar();
-            player.transform.position = transform.position;
+            player.transform.position = transform.position-Vector3.forward;
             
         }
 

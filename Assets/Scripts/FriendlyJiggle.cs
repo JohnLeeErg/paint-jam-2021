@@ -39,6 +39,10 @@ public class FriendlyJiggle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        startRotation = new Vector3(startX, startY, startZ);
+        endRotation = new Vector3(endX, endY, endZ);
+        oppositeEndRotation = new Vector3(-endX, -endY, -endZ);
+
         if (waitTimer <= 0)
         {
             // get a double version of the timer cuz why not

@@ -718,6 +718,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.0056319754, y: 0.0035436966}
   m_EdgeRadius: 0
+--- !u!114 &198254395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198254393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67ba3392cf24a8146923b8f524ed5e2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCName: Father Moustachio
+  startPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &236164525 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bd05443603074d14b9965f0048052345, type: 3}
@@ -1027,6 +1041,8 @@ MonoBehaviour:
   friendlyBabyConvo: {fileID: 319738969}
   lockedOutBabyConvo: {fileID: 319738972}
   trickedOutBabyConvo: {fileID: 919132148770966337}
+  sadKidConvo: {fileID: 1266284893}
+  happyKidConvo: {fileID: 1266284895}
 --- !u!1001 &328198858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2142,6 +2158,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.003783552, y: 0.0059245117}
   m_EdgeRadius: 0
+--- !u!114 &775862720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775862716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d030a725ead6c4e4891b1b009d151545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCName: Mama Moustachio
+  startPosition: {x: 0, y: 0, z: 0}
 --- !u!1001 &830761916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3363,6 +3393,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7f9db5d74b78e24d9fe6356085a3aa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCName: Moustache Kid
+  startPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &1266284895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266284892}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad0a0a49e3db7544690b5100fc3020f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   NPCName: Moustache Kid

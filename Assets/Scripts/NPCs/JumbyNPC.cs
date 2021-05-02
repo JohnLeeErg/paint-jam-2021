@@ -35,6 +35,8 @@ public class JumbyNPC : ExampleNPC
         propose.AddOption("\"Just come with me on my boat and I'll show you...\"", come);
 
         come.AddOption("\"Great, lets go then.\"", transform);
+
+        console.AddOption("\"That's Right! I'll see you around then. \"");
     }
 
 }

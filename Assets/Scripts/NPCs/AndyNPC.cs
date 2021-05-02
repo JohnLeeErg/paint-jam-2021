@@ -10,12 +10,12 @@ public class AndyNPC : ExampleNPC
 
         Node whatAreYouDoing = new Node("I'm thinking about...        Painting a can of Campbells Soup...      Maybe a lot of them..", startNode);
 
-        Node whatsTheMeaning = new Node("Um,      I dont know?    I don't think I should just tell you what it means...     You've gotta feel it, right? OK... ");
+        Node whatsTheMeaning = new Node("Um,      I dont know?    I don't think I should just tell you what it means...     You've gotta feel it, right? OK... ",startNode);
 
         Node notReally = new Node("Uh....          No not right now...       Sorry.. ",startNode);
 
-
-        startNode.AddOption("What's my deal? what's your deal!", startNode);
+        whatAreYouDoing.AddOption("What does that mean?", whatsTheMeaning);
+        startNode.AddOption("What's my deal? what's your deal!", whatAreYouDoing);
 
         startNode.AddOption("You should come on my boat so you can sacrifice yourself to the Maw.",notReally);
 
@@ -40,9 +40,12 @@ public class AndyNPC : ExampleNPC
 
 
         money.AddOption("Leave Andy to his Cans");
+
         money.AddOption("Take Andy out to Sea");
 
-        startNode.AddOption("You should come on my boat, just cause it would be cool, as like an art, like, statement");
+        startNode.AddOption("You should come on my boat, just cause it would be cool, as like an art, like, statement",art);
+
+        startNode.AddOption("Leave Andy to his Cans");
 
     }
 }

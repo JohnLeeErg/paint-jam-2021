@@ -8,6 +8,7 @@ public class Conversation : MonoBehaviour
     [SerializeField] private UIController UI_cont;
     [SerializeField] private Canvas convCanvas;
     public UnityEvent startConv, endConv;
+    public UnityEvent<Transform> passNPCTransform;
     private Node[,] nodeMap;
     private Node startNode;
     private Node curNode;
@@ -75,6 +76,11 @@ public class Conversation : MonoBehaviour
             //then check if we are going to another node or quitting
             if (curNode.options[butNum].isQuit)
             {
+                if (curNode.options[butNum].npcTransform != null)
+                {
+                    //if it has a transform, call the transform event (for puttin mfs on a boat mainly)
+                    passNPCTransform.Invoke(curNode.options[butNum].npcTransform);
+                }
                 LeaveConversation();
             }
             else
@@ -142,6 +148,7 @@ public class Node
         options.Add(new Option(text, code));
     }
 
+
     public void RemoveOption(Option toRemove)
     {
         options.Remove(toRemove);
@@ -153,6 +160,7 @@ public class Option
     public Node linkNode;
     public string text, code;
     public bool isQuit;
+    public Transform npcTransform;
 
     public Option(string text, Node linkNode)
     {
@@ -180,5 +188,11 @@ public class Option
         this.text = text;
         this.code = code;
         this.isQuit = true;
+    }
+    public Option(string text, Transform npcTransform) //if an option has no attached node, it is assumed that choosing that option will exit the conversation
+    {
+        this.text = text;
+        this.isQuit = true;
+        this.npcTransform = npcTransform;
     }
 }

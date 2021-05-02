@@ -123,6 +123,10 @@ public class Conversation : MonoBehaviour
         {
             babyManager.GotLockedOut();
         }
+        else if(code == "trickedBaby")
+        {
+            babyManager.GotTrickedOut();
+        }
     }
 
     

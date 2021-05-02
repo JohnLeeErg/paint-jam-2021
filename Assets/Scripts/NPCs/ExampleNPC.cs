@@ -93,7 +93,9 @@ public class ExampleNPC : MonoBehaviour
         {
             wanderingScript.enabled = true;
         }
-        convText.HidePrompt();
+
+        if (enabled)
+            convText.HidePrompt();
         canConverse = false;
     }
 }

@@ -6,29 +6,32 @@ public class BabyManager : MonoBehaviour
 {
     [SerializeField] BabyMoustachioNPC friendlyBabyConvo;
     [SerializeField] BabyMoustachioLockedOut lockedOutBabyConvo;
-    bool lockedOut;
+    [SerializeField] BabyMoustachioTrickedOut trickedOutBabyConvo;
 
     // Start is called before the first frame update
     void Start()
     {
-        lockedOut = false;
         friendlyBabyConvo.enabled = true;
         lockedOutBabyConvo.enabled = false;
+        trickedOutBabyConvo.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (lockedOut == true)
-        {
-            friendlyBabyConvo.enabled = false;
-            lockedOutBabyConvo.enabled = true;
-        }
 
     }
 
     public void GotLockedOut()
     {
-        lockedOut = true;
+        friendlyBabyConvo.enabled = false;
+        lockedOutBabyConvo.enabled = true;
+    }
+
+    public void GotTrickedOut()
+    {
+        friendlyBabyConvo.enabled = false;
+        trickedOutBabyConvo.enabled = true;
+        // TODO: Add can move here
     }
 }

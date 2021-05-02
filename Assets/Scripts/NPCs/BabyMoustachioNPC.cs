@@ -32,6 +32,15 @@ public class BabyMoustachioNPC : ExampleNPC
         Node broken = new Node("[They're sobbing uncontrollably. Inconsolably. Maybe you shouldn't have been so hard on the kid...]");
         broken.AddOption("[Leave Conversation]", "bulliedBaby");
 
+        // Tricked
+        Node tricked = new Node("WHAT?!!!?! HOW COULD YOU??? After all the fair and justified things I did for my can! [they start sobbing uncontrollably]");
+        tricked.AddOption("[Leave Conversation]", "trickedBaby");
+
+        // Approval
+        Node approval = new Node("That's right! Everybody ought to get their own cans fair and square, just like me! Hey, you're not so bad, greenleather. Y'know, if you wanted me to go on a mysterious boat journey right now, I definitely wouldn't refuse!");
+        approval.AddOption("Ask if they want to go on a boat ride", transform);
+        approval.AddOption("Boat journey? I would never!", dismissal);
+
 
 
 
@@ -61,7 +70,19 @@ public class BabyMoustachioNPC : ExampleNPC
          * 
          * 
          */
+        Node kind = new Node("Just playing with MY super cool soup can that I got all by MYself fair n square!", startNode);
 
+        // Kind success
+        Node kindSuccess = new Node("Yeah! Thanks! Finally somebody who appreciates the beauty of this fairly-gotten can. Say, do you wanna try it out? It's super fun!");
+
+        // Kindness :)
+        kind.AddOption("Wow! Super cool can! I bet you got that all by yourself without any foul play!", kindSuccess);
+        kind.AddOption("Are you... sure that you got that fair and square?", defense);
+
+        // A trick perhaps
+        kindSuccess.AddOption("Sure! [take the can and toss it to the other kid]", tricked);
+        kindSuccess.AddOption("No, I'm alright, thanks. I should find my own can...", approval);
+        
 
 
 
@@ -71,7 +92,7 @@ public class BabyMoustachioNPC : ExampleNPC
          */
         startNode.AddOption("Ask if they want to go on a boat ride", failAttempt);
         startNode.AddOption("Greenleather? Why you little...", aggressive);
-        startNode.AddOption("Whatcha doin' there kiddo?");
+        startNode.AddOption("Whatcha doin' there kiddo?", kind);
         startNode.AddOption("[Leave Conversation]");
 
 
@@ -89,10 +110,5 @@ public class BabyMoustachioNPC : ExampleNPC
         
         yesIllDoIt.AddOption("Take the frog to the boat",transform);
         */
-    }
-
-    internal void RefreshNodes()
-    {
-        throw new NotImplementedException();
     }
 }

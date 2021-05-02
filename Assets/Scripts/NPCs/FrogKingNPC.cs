@@ -33,6 +33,6 @@ public class FrogKingNPC : ExampleNPC
         Node yesIllDoIt = new Node("I do grow weary; the weight of responsibility... Very well, a break couldn't hurt. I will leave my frogs in Valerie's care and come with you!");
         valery.AddOption("Lets go then!", yesIllDoIt);
         startNode.AddOption("Leave Conversation");
-        yesIllDoIt.AddOption("Take the frog to the boat");
+        yesIllDoIt.AddOption("Take the frog to the boat",transform);
     }
 }

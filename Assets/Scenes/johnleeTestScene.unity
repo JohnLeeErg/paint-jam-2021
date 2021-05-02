@@ -1085,6 +1085,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e33b5c2f34243754cbcc9ce3eec5e3c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NPCName: 
+  startPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &505961513
 GameObject:
   m_ObjectHideFlags: 0
@@ -1267,6 +1269,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b67c627b6df7954392e762f6ac1921e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NPCName: Valery
+  startPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &547189538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1387,6 +1391,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e33b5c2f34243754cbcc9ce3eec5e3c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NPCName: 
+  startPosition: {x: 0, y: 0, z: 0}
 --- !u!58 &564285261
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2171,6 +2177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fccb941652c5e45865e7fe7dab0eda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NPCName: Andy Warhol
+  startPosition: {x: 0, y: 0, z: 0}
 --- !u!61 &931348552
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2986,6 +2994,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994877df6f7a398469abdad372529bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NPCName: Riddle Master Jimmy
+  startPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &1188314715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3424,6 +3434,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4c9a0d14bc19a4d996f96104aecb8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NPCName: Harold
+  startPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &1435166206 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7144128552069832955, guid: f6c97290f7816d4418ac3b9b29602ccb, type: 3}
@@ -3663,6 +3675,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.19, y: 1.82}
   m_EdgeRadius: 0
+--- !u!1 &1491277736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1491277737}
+  m_Layer: 3
+  m_Name: passenger sit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1491277737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491277736}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.007, y: -0.654, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1575484307}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1501097201
 GameObject:
   m_ObjectHideFlags: 0
@@ -4427,6 +4469,11 @@ PrefabInstance:
       objectReference: {fileID: 2001401740}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 374cebf65a63a534eacc8facc0ddf5c3, type: 3}
+--- !u!4 &1575484307 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2431034813728440260, guid: 374cebf65a63a534eacc8facc0ddf5c3, type: 3}
+  m_PrefabInstance: {fileID: 1575484306}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1575924076
 GameObject:
   m_ObjectHideFlags: 0
@@ -4474,6 +4521,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3abb31873a4ff84ebac331182be9593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NPCName: The Soup Verifier
+  startPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &1575924079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4710,6 +4759,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb630fa659cb5c54382c93b1ce28abf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NPCName: King Frog
+  startPosition: {x: 0, y: 0, z: 0}
 --- !u!61 &1622584324
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5415,6 +5466,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Text Interface
       objectReference: {fileID: 0}
+    - target: {fileID: 7440621324101742996, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
+      propertyPath: passNPCTransform.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7440621324101742996, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
+      propertyPath: passNPCTransform.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7440621324101742996, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
+      propertyPath: passNPCTransform.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1875103207}
+    - target: {fileID: 7440621324101742996, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
+      propertyPath: passNPCTransform.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7440621324101742996, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
+      propertyPath: passNPCTransform.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FastenNPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 7440621324101742996, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
+      propertyPath: passNPCTransform.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PassengerManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7440621324101742996, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
+      propertyPath: passNPCTransform.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Transform, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7665275869442252683, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
       propertyPath: m_Color.a
       value: 0.50980395
@@ -5429,6 +5508,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
+--- !u!1 &1875103206 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7440621324101743002, guid: e5d54cfd5b8be2d49a3a48b1f26b3604, type: 3}
+  m_PrefabInstance: {fileID: 1875103205}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1875103207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875103206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f8a48edf2bd8b4d859735f5aa4ce07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followPoint: {fileID: 1491277737}
 --- !u!1 &1910686414
 GameObject:
   m_ObjectHideFlags: 0

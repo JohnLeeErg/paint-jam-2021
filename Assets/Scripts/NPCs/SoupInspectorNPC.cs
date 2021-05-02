@@ -25,7 +25,7 @@ public class SoupInspectorNPC : ExampleNPC
         arentCampbellsCansAllTheSame.AddOption("Ask who he is even verifying these cans for", furtherQuestion);
 
         Node cmonnnn = new Node("Alright, alright, lets do it! Just a peak, though, and then I have to get back to work.");
-        cmonnnn.AddOption("Take the Soup Verifier to the boat");
+        cmonnnn.AddOption("Take the Soup Verifier to the boat", transform);
         cmonnnn.AddOption("Leave the Soup Verifier to his soups");
 
         visitIt.AddOption("say 'cmonnnnn doo itttt'", cmonnnn);

@@ -22,6 +22,8 @@ public class Conversation : MonoBehaviour
 
         if (endConv == null)
             endConv = new UnityEvent();
+
+        passNPCTransform.AddListener(GetComponent<PassengerManager>().FastenNPC);
     }
 
 
@@ -132,6 +134,10 @@ public class Node
     public void AddOption(string text, Node child)
     {
         options.Add(new Option(text, child));
+    }
+    public void AddOption(string text, Transform transform)
+    {
+        options.Add(new Option(text, transform));
     }
 
     public void AddOption(string text, Node child, string code)

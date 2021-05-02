@@ -6,14 +6,17 @@ using UnityEngine;
 public class ExampleNPC : MonoBehaviour
 {
     public Node startNode;
+    public string NPCName;
     private Conversation convText;
     WalkFromPointToPoint wanderingScript;
     private bool canConverse = false;
     private bool inConv = false;
+    [HideInInspector] public Vector3 startPosition;
 
     // Start is called before the first frame update
     void Start()
     {
+        startPosition = transform.position;
         NodeCreate();
         convText = GameObject.FindGameObjectWithTag("GameManager").GetComponent<Conversation>();
         wanderingScript = GetComponent<WalkFromPointToPoint>();//in case this npc can move, stop it while its talking
@@ -72,7 +75,10 @@ public class ExampleNPC : MonoBehaviour
     {
         if (collision.transform.tag == "Player")
         {
-            convText.ShowPrompt();
+            if (enabled)
+            {
+                convText.ShowPrompt();
+            }
             canConverse = true;
         }
     }

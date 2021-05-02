@@ -40,7 +40,7 @@ public class RiddleMasterNPC : ExampleNPC
         Riddle3.AddOption("Andrew B. Hotkins",FailedRiddle);
         Riddle3.AddOption("Casey 'Corksrew' Denson",FailedRiddle);
 
-        Finished.AddOption("Bring Jimmy The Riddle Master To The Boat");
+        Finished.AddOption("Bring Jimmy The Riddle Master To The Boat",transform);
         Finished.AddOption("Let Jimmy The Riddle Master Remain Here.");
 
         startNode.AddOption(" Give Up, I will never solve these riddles :( ");

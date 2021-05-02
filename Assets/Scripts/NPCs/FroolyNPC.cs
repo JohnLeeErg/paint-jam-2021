@@ -16,14 +16,14 @@ public class FroolyNPC : ExampleNPC
         startNode.AddOption("\"Oh, its you.\"", greeting);
         startNode.AddOption("\"Sorry, I gotta split.\"");
 
-        greeting.AddOption("\"Yep, I came back to find someone to toss into the maw.\"");
-        greeting.AddOption("\"Well, I returned to pick someone for a super special job.\"");
+        greeting.AddOption("\"Yep, I came back to find someone to toss into the maw.\"", maw);
+        greeting.AddOption("\"Well, I returned to pick someone for a super special job.\"", job);
 
         maw.AddOption("Maybe I will, thanks for the tip...");
         maw.AddOption("You shouldn't be so rude, bye.");
 
         job.AddOption("\"No, you have to want to do out of the the goodness of your heart.\"", free);
-        job.AddOption("\"Yep, a ton of money. It's a difficult job though.\"");
+        job.AddOption("\"Yep, a ton of money. It's a difficult job though.\"", money);
 
         money.AddOption("\"Great, just wait over on my boat then,\"", transform);
         money.AddOption("\"I'll have to think about it some more, see you later.");

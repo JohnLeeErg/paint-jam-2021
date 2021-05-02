@@ -49,6 +49,7 @@ public class ExampleNPC : MonoBehaviour
     public void StartConv()
     {
         inConv = true;
+        convText.HidePrompt();
     }
     public void EndConv()
     {

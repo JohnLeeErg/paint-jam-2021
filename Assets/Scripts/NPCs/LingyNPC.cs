@@ -24,7 +24,7 @@ public class LingyNPC : ExampleNPC
         doing.AddOption("\"You'll figure something out eventually, good luck!\"");
 
         boat.AddOption("\"I'm going to sacrifice you to the maw in the center of our world.\"", sacrifice);
-        boat.AddOption("\"We're going to find you a purpose.\"");
+        boat.AddOption("\"We're going to find you a purpose.\"",purpose);
 
         purpose.AddOption("\"Awesome, lets go then.\"", transform);
 

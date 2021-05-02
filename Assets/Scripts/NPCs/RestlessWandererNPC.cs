@@ -28,6 +28,7 @@ public class RestlessWandererNPC : ExampleNPC
         enquireAboutStuff.AddOption("Ask about the Soup Veifyier", askAboutSoupVerifyier);
         enquireAboutStuff.AddOption("Ask about other islands", askAboutOtherIslands);
 
+        offerToTakeHimWith.AddOption("Take Him To The Boat");
         startNode.AddOption("Leave Conversation");
     }
 }

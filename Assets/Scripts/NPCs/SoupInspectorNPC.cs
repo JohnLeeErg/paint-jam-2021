@@ -12,7 +12,7 @@ public class SoupInspectorNPC : ExampleNPC
 
         startNode.AddOption("Where do the soup cans come from?",whereSoupComesFrom);
 
-        Node visitIt = new Node("Visit The Maw! Strictly forbidden! Although.... To glimpse it just once,.. It's a soup verifyier's dream...");
+        Node visitIt = new Node("Visit The Maw! Strictly forbidden! Although.... To glimpse it just once,.. It's a soup verifyier's dream...",whereSoupComesFrom);
 
         whereSoupComesFrom.AddOption("tell him you can take him to The Maw",visitIt);
 
@@ -25,9 +25,11 @@ public class SoupInspectorNPC : ExampleNPC
         arentCampbellsCansAllTheSame.AddOption("Ask who he is even verifying these cans for", furtherQuestion);
 
         Node cmonnnn = new Node("Alright, alright, lets do it! Just a peak, though, and then I have to get back to work.");
+        cmonnnn.AddOption("Take the Soup Verifier to the boat");
+        cmonnnn.AddOption("Leave the Soup Verifier to his soups");
 
         visitIt.AddOption("say 'cmonnnnn doo itttt'", cmonnnn);
-
+        furtherQuestion.AddOption("Leave Conversation");
         startNode.AddOption("Leave Conversation");
     }
 }

@@ -7,7 +7,7 @@ public class sceneManager : MonoBehaviour
 {
     private void Update()
     {
-        if (Input.GetButtonUp("Exit"))
+        if (Input.GetButtonUp("Cancel"))
         {
             print("quitting");
             Application.Quit();

@@ -24,7 +24,7 @@ public class TheMawNPC : ExampleNPC
 
         MidNode = new Node("Where is the sacrifice, Goblin? You don't wish to incur Campbell's Wrath do you? Then go forth, and find a worthy offering.");
         MidNode.AddOption("bow and scurry off");
-        MidNode.AddOption("prostate yourself and apologize");
+        MidNode.AddOption("prostrate yourself and apologize");
         MidNode.AddOption("silently leave, head low");
 
         EndNode = new Node("Ahh, little goblin, you have returned with an offering. Is this truly who you think is fit for The Maw?");

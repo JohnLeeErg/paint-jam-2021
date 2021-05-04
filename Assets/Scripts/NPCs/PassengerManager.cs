@@ -97,6 +97,7 @@ public class PassengerManager : MonoBehaviour
     {
 
         boatRef.enabled = false;
+        flex.isActive = true;
         CameraFade.StartAlphaFade(Color.black, false, 7f);
         victimName.text = "You, The Soup Goblin";
         player.parent = victim;

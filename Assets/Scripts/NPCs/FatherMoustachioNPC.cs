@@ -7,7 +7,7 @@ public class FatherMoustachioNPC : ExampleNPC
 {
     protected override void NodeCreate()
     {
-        startNode = new Node("Well, howdy there fella! How's it goin'? How about that weather? Lookin' like a real scorcher today! But that soup's gonna be comin' down real hard tomorrow!");
+        startNode = new Node("Well, howdy there fella! How's it goin'? How about that weather? Lookin' like a real scorcher today! But that soup's gonna be comin' down hard tomorrow!");
 
         /* End nodes
          * 
@@ -20,7 +20,7 @@ public class FatherMoustachioNPC : ExampleNPC
         Node dontLike = new Node("I don't like to talk about that.", startNode);
 
         // Stand up fella
-        Node standUpFella = new Node("Hey, yknow what? You seem like a real stand-up fella. Why don't we get outta here and get a can or two before the game?");
+        Node standUpFella = new Node("Hey, y'know what? You seem like a real stand-up fella. Why don't we get outta here and get a can or two before the game?");
 
         // Leaving
         Node leaving = new Node("Sounds great, fella! We can take a boat ride, get a couple canskies for the game!");
@@ -41,12 +41,12 @@ public class FatherMoustachioNPC : ExampleNPC
 
 
         // Weather
-        Node weather2 = new Node("BAAAAAHAHAAHA!!!! I wish, friend! It's sure lookin mighty gorgeous today. Say, that weather's changing all the time these days! One day soup's pourin' down, the next day I'm dry as a raisin!", startNode);
+        Node weather2 = new Node("BAAAAAHAHAAHA!!!! I wish, friend! It's sure lookin' mighty gorgeous today. Say, that weather's changing all the time these days! One day soup's pourin' down, the next day I'm dry as a raisin!", startNode);
         weather2.AddOption("Yeah, that climate change is a real killer!", dontLike);
-        weather2.AddOption("Soup sure is unpredictable. I think I know how to get it under control...", dontLike);
+        weather2.AddOption("Soup sure is unpredictable. Maybe we need to appease it...", dontLike);
         weather2.AddOption("One day I'm dry as a salteen, the next I'm like a salteen, IN THE SOUP!", standUpFella);
 
-        Node weather = new Node("Ah, that weather's sure lookin' lovely today, ain't it? Looks like there's soupfall in the forecast tomorrow though!", startNode);
+        Node weather = new Node("Ah, that weather's sure lookin' lovely today, ain't it? Looks like soupfall in the forecast tomorrow though!", startNode);
         weather.AddOption("Clear days are great for folks like me! Helps with all the soup-sailing!", dontLike);
         weather.AddOption("Did you order this beautiful weather?", weather2);
         weather.AddOption("Ah, soupfall? I was hoping for another beautiful day like this one!", weather2);
@@ -54,11 +54,11 @@ public class FatherMoustachioNPC : ExampleNPC
 
 
         // Sports
-        Node brothsFan = new Node("Aha, I know a Broths fan when I see one! You've got good taste fella! Are you gonna be watchin' the game tonight?", startNode);
+        Node brothsFan = new Node("Aha, I know a Broths fan when I see one! You've got good taste fella! Are ya gonna be watchin' the game tonight?", startNode);
         brothsFan.AddOption("Yeah, I NEVER miss a game!", standUpFella);
         brothsFan.AddOption("Nah, I'm a fan but I probably won't be watching tonight...", rejected);
 
-        Node sports = new Node("Haha! I knew you were a sporty kinda fella! Gettin' ready for the Big Game tonight! So, are you a Ladlers fan? Or are you rootin' for those Soupland Broths?", startNode);
+        Node sports = new Node("Haha! I knew you were a sporty kinda fella! I'm out here gettin' ready for the Big Game tonight! So, are you a Ladlers fan? Or are you rootin' for those Soupland Broths?", startNode);
         sports.AddOption("Saltfield Ladlers", ladlersFan);
         sports.AddOption("Soupland Broths", brothsFan);
 

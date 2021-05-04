@@ -6,7 +6,7 @@ public class RiddleMasterNPC : ExampleNPC
 {
     protected override void NodeCreate()
     {
-        startNode = new Node("Howdy Pardner! I am the Riddle Master! I know what y'all seek. I'll join ya on your Soup Goblin Pilgrimage... For a price that is! You must first answer my three riddles. Yee Haw!");
+        startNode = new Node("Howdy Pardner! I'm the Riddle Master! I know what y'all seek. I'll join ya on your <color=#5DA45D>Soup Goblin</color> Pilgrimage... For a price that is! You must first answer my three riddles. Yee Haw!");
 
         Node FailedRiddle = new Node("Incorrect, Pardner. Better luck next time. So long little doggies. Yippee ki yay!",startNode);
 
@@ -14,11 +14,11 @@ public class RiddleMasterNPC : ExampleNPC
 
         startNode.AddOption("Tell the Riddle Master to 'Bring it on!' ", Riddle1);
 
-        Node Riddle2 = new Node("Question 2: how many wigs was Andy Warhol in posession of?", startNode);
+        Node Riddle2 = new Node("Question 2: How many wigs is Andy Warhol in posession of?", startNode);
 
         Node Riddle3 = new Node("And now for y'all's Final Question: What is my full name?", startNode);
 
-        Node Finished = new Node("Hot dog! You've solved all my riddles n' inquiries! I am at your service, pardner! What do you choose?", startNode);
+        Node Finished = new Node("Hot dawg! You've solved all my riddles n' inquiries! I am at your service, pardner! What do you choose?", startNode);
 
         
 
@@ -40,9 +40,9 @@ public class RiddleMasterNPC : ExampleNPC
         Riddle3.AddOption("Andrew B. Hotkins",FailedRiddle);
         Riddle3.AddOption("Casey 'Corksrew' Denson",FailedRiddle);
 
-        Finished.AddOption("Bring Jimmy The Riddle Master To The Boat",transform);
-        Finished.AddOption("Let Jimmy The Riddle Master Remain Here.");
+        Finished.AddOption("[Bring Jimmy the Riddle Master to the boat]",transform);
+        Finished.AddOption("[Let Jimmy the Riddle Master remain here]");
 
-        startNode.AddOption(" Give Up, I will never solve these riddles :( ");
+        startNode.AddOption("[Give Up] I will never solve these riddles...");
     }
 }

@@ -6,25 +6,24 @@ public class oldCultist : ExampleNPC
 {
     protected override void NodeCreate()
     {
-        startNode = new Node("These inscriptions.... I have spent all my life trying to uncover their meaning, yet I am no closer to finding out what they mean....");
+        startNode = new Node("Ahhh, a <color=#5DA45D>Soup Goblin</color>. I know what your presence here means. I am ready for the <color=#41F1F4>Journey</color>.");
 
         //option what
-        Node option1 = new Node("Ah a soup goblin, I know what your presence here means. I am ready for the journey", startNode);
 
-        Node option1sub1 = new Node("You think you are the first or the last? there has been countless goblins before you.", startNode);
-        startNode.AddOption("soup goblins", option1sub1);
+        Node option1sub1 = new Node("You think you are the first or the last? There have been countless <color=#5DA45D>Goblins</color> before you.", startNode);
+        startNode.AddOption("<color=#5DA45D>Soup Goblins</color>?", option1sub1);
 
-        Node option1sub2 = new Node("It is my time. The young are taken to often. This land used to be plentiful with people", startNode);
-        startNode.AddOption("ready", option1);
+        Node option1sub2 = new Node("It is my time. The young are taken too often. This land used to be plentiful with people...", startNode);
+        startNode.AddOption("Ready?", option1sub2);
 
-        Node option1sub3 = new Node("The maw always hungers, it might never be satisfied. Hopefully I can sate it long enough for others to live", startNode);
-        startNode.AddOption("journey", option1);
+        Node option1sub3 = new Node("<color=#8B0000>The Maw</color> always hungers... With each refilling of the Soup, one must be Chosen to feed it. <color=#8B0000>The Maw</color> might never be satisfied. Hopefully I can at least sate it long enough for others to live.", startNode);
+        startNode.AddOption("<color=#41F1F4>The Journey</color>?", option1sub3);
 
 
-        startNode.AddOption("Take the Old Man", transform);
+        startNode.AddOption("[Take him to the boat]", transform);
 
 
         //not first soup goblin
-        startNode.AddOption("Leave Conversation");
+        startNode.AddOption("[Leave Conversation]");
     }
 }

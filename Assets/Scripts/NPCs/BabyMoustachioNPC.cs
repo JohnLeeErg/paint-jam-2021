@@ -33,7 +33,7 @@ public class BabyMoustachioNPC : ExampleNPC
         broken.AddOption("[Leave Conversation]", "bulliedBaby");
 
         // Tricked
-        Node tricked = new Node("WHAT?!!!?! HOW COULD YOU??? After all the fair and justified things I did for my can! [they start sobbing uncontrollably]");
+        Node tricked = new Node("WHAT?!!!?! HOW COULD YOU??? After all the fair and justified things I did for my can! [They start sobbing uncontrollably]");
         tricked.AddOption("[Leave Conversation]", "trickedBaby");
 
         // Acceptance

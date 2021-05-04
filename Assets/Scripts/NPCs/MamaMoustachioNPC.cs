@@ -10,7 +10,7 @@ public class MamaMoustachioNPC : ExampleNPC
         startNode = new Node("...");
 
         // Chosen
-        Node chosen = new Node("Fine. I hope I taste like rot.");
+        Node chosen = new Node("Fine. I hope I taste like Rot.");
         chosen.AddOption("[Take her to the boat]", transform);
 
         // No
@@ -30,7 +30,7 @@ public class MamaMoustachioNPC : ExampleNPC
         inAWay.AddOption("In what way?", inThisWay);
 
         // You dont get it
-        Node dontGetIt = new Node("You don't get it");
+        Node dontGetIt = new Node("You don't get it.");
         dontGetIt.AddOption("[Leave Conversation]");
 
         // I hope that makes you feel better
@@ -38,13 +38,13 @@ public class MamaMoustachioNPC : ExampleNPC
         feelBetter.AddOption("[Leave Conversation]");
 
         // Could be worse?
-        Node couldBeWorse = new Node("And what of the children? Are they to waste away on this tiny island forever too? To fight over garbage until The Maw decides it's their time? I know who you are, Goblin. If you're here to take me away, do it. But leave the children alone.");
+        Node couldBeWorse = new Node("And what of the children? Are they to waste away on this tiny island forever too? To fight over garbage until <color=#8B0000>The Maw</color> decides it's their time? I know who you are, <color=#5DA45D>Goblin</color>. If you're here to take me away, do it. But leave the children alone.");
         couldBeWorse.AddOption("You have been chosen. Please, come with me.", chosen);
-        couldBeWorse.AddOption("What am I supposed to do? If I don't take one of you, The Maw will take me!", feelBetter);
+        couldBeWorse.AddOption("What am I supposed to do? If I don't take one of you, <color=#8B0000>The Maw</color> will take me!", feelBetter);
         couldBeWorse.AddOption("...", yeah);
 
         // Have you talked to the man?
-        Node haveYouTalked = new Node("Have you talked to the man? All he cares about is SPORTS and the WEATHER. Can he not see where we are? Does he not care that we live meaningless lives, floating in this soup sea, with nothing to do but watch the Big Game and wait for some wretched soup goblin to come take us away?");
+        Node haveYouTalked = new Node("Have you talked to the man? All he cares about is SPORTS and the WEATHER. Can he not see where we are? Does he not care that we live meaningless lives, floating in this soup sea, with nothing to do but watch the Big Game and wait for some wretched <color=#5DA45D>Soup Goblin</color> to come take us away?");
         haveYouTalked.AddOption("I mean, it could be worse...", couldBeWorse);
 
 
@@ -57,7 +57,7 @@ public class MamaMoustachioNPC : ExampleNPC
 
 
         // Thinking
-        Node thinking = new Node("I come out here to think sometimes... To the rocks. To get away from...");
+        Node thinking = new Node("I come out to the rocks to think sometimes... To get away from...");
         thinking.AddOption("The kids?", no);
         thinking.AddOption("Baby Moustachio?", no);
         thinking.AddOption("Moustache Kid?", no);
@@ -66,7 +66,7 @@ public class MamaMoustachioNPC : ExampleNPC
 
         // Initial
         Node what = new Node("... What do you want?");
-        what.AddOption("Ask if she want to go on a boat ride", no);
+        what.AddOption("[Ask if she wants to go on a boat ride]", no);
         what.AddOption("What are you doing over here?", thinking);
 
 

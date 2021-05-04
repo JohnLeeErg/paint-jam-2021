@@ -11,17 +11,17 @@ public class HouseNPC : ExampleNPC
         Node truth = new Node("Well why don't you do it then!", startNode);
         Node ask = new Node("Well I'm asking \"of you\" to leave!", truth);
 
-        startNode.AddOption("\"Please! Someone needs to be the one to make the sacrifice.\"", truth);
-        startNode.AddOption("\"I just want to talk about our lord and savoury.\"", lie);
+        startNode.AddOption("Please! Someone needs to be the one to make the <color=#F00000>Sacrifice</color>.", truth);
+        startNode.AddOption("I just want to talk about our Lord and Savoury.", lie);
 
-        truth.AddOption("\"Huh, good point, maybe I will.\"");
-        truth.AddOption("\"That was not what was asked of me.\"", ask);
+        truth.AddOption("Huh, good point. Maybe I will. [Leave Conversation]");
+        truth.AddOption("That was not what was asked of me.", ask);
 
-        ask.AddOption("\"Fine, avoid your sacred duty.\"");
-        ask.AddOption("\"Well, if its not you, it'll be someone else.\"");
+        ask.AddOption("Fine, avoid your sacred duty. [Leave Conversation]");
+        ask.AddOption("Well, if its not you, it'll be someone else. [Leave Conversation]");
 
-        startNode.AddOption("\"Alright, I'm leaving now.\"");
-        lie.AddOption("\"Alright, I'm leaving then.\"");
+        startNode.AddOption("Alright, I'm leaving now. [Leave Conversation]");
+        lie.AddOption("Alright, I'm leaving then. [Leave Conversation]");
     }
 
 }

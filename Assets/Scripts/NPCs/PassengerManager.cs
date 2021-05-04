@@ -14,7 +14,9 @@ public class PassengerManager : MonoBehaviour
     [SerializeField] Transform player;
     [SerializeField] float endFallSpeed;
     [SerializeField] NVIDIA.Flex.FlexSourceActor flex;
-    public Transform currentPassenger;
+    [SerializeField] TheMawNPC maw;
+    [SerializeField] AudioSource mawMusic;
+    [HideInInspector] public Transform currentPassenger;
     ExampleNPC currentPassengerScript;
     Collider2D currentPassengerCol;
     WalkFromPointToPoint currentPassengerWalkin;
@@ -81,6 +83,8 @@ public class PassengerManager : MonoBehaviour
 
     public void EndTheGameWithCurrentPassenger()
     {
+        mawMusic.spatialBlend = 0;
+        maw.enabled = false;
         boatRef.enabled = false;
         flex.isActive = true;
         CameraFade.StartAlphaFade(Color.black, false, 7f);
@@ -96,6 +100,8 @@ public class PassengerManager : MonoBehaviour
     public void EndTheGameWithPlayer()
     {
 
+        mawMusic.spatialBlend = 0;
+        maw.enabled = false;
         boatRef.enabled = false;
         flex.isActive = true;
         CameraFade.StartAlphaFade(Color.black, false, 7f);
@@ -110,7 +116,6 @@ public class PassengerManager : MonoBehaviour
     }
     void ShowMeTheMoney()
     {
-        CameraFade.SetScreenOverlayColor(Color.black);
         if (cam1 && cam2)
         {
             cam1.enabled = false;
@@ -124,6 +129,7 @@ public class PassengerManager : MonoBehaviour
         if (boatRef)
         {
             boatRef.enabled = false;
+            maw.GetComponent<Collider2D>().enabled = false;
         }
     }
 
@@ -132,5 +138,6 @@ public class PassengerManager : MonoBehaviour
         if(boatRef)
             boatRef.enabled = true;
         cam1.GetComponent<CameraFollow>().enabled = true;
+        maw.GetComponent<Collider2D>().enabled = true;
     }
 }

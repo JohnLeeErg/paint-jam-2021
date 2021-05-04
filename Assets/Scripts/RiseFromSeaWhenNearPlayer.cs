@@ -30,10 +30,10 @@ public class RiseFromSeaWhenNearPlayer : MonoBehaviour
             }
             else
             {
-                if (!colRef.enabled)
-                {
-                    colRef.enabled = true;
-                }
+                //if (!colRef.enabled)
+                //{
+                //    colRef.enabled = true;
+                //}
                 transform.Rotate(transform.up, rotateSpeed * Time.deltaTime);
                 risen = true;
             }
@@ -41,10 +41,10 @@ public class RiseFromSeaWhenNearPlayer : MonoBehaviour
         else
         {
             risen = false;
-            if (colRef.enabled)
-            {
-                colRef.enabled = false;
-            }
+            //if (colRef.enabled)
+            //{
+            //    colRef.enabled = false;
+            //}
             if (transform.position.z != startZ)
             {
 

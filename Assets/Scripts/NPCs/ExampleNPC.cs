@@ -98,4 +98,27 @@ public class ExampleNPC : MonoBehaviour
             convText.HidePrompt();
         canConverse = false;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.tag == "Player")
+        {
+            if (enabled)
+            {
+                convText.ShowPrompt();
+            }
+            canConverse = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (wanderingScript)
+        {
+            wanderingScript.enabled = true;
+        }
+
+        if (enabled)
+            convText.HidePrompt();
+        canConverse = false;
+    }
+
 }

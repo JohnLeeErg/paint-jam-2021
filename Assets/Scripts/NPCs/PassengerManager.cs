@@ -81,6 +81,7 @@ public class PassengerManager : MonoBehaviour
 
     public void EndTheGameWithCurrentPassenger()
     {
+        boatRef.enabled = false;
         flex.isActive = true;
         CameraFade.StartAlphaFade(Color.black, false, 7f);
         victimName.text = currentPassengerScript.NPCName;
@@ -96,6 +97,7 @@ public class PassengerManager : MonoBehaviour
     {
 
         boatRef.enabled = false;
+        flex.isActive = true;
         CameraFade.StartAlphaFade(Color.black, false, 7f);
         victimName.text = "You, The Soup Goblin";
         player.parent = victim;
